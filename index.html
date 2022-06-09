@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="secondary_navigation">
+            <div id="secondary_navigation_changingDiv">
+                <div id="for_chats_section">
+                    <div id="new_group_selector" class="secondary_nav_items">
+                        New Group
+                    </div>
+                    <div id="new_broadcast_selector" class="secondary_nav_items">
+                        New broadcast
+                    </div>
+                    <div id="linked_devices_selector" class="secondary_nav_items">
+                        Linked device
+                    </div>
+                    <div id="starred_message_selector" class="secondary_nav_items">
+                        Starred messages
+                    </div>
+                </div>
+                <div id="for_status_section">
+                    <div id="status_privacy_selector" class="secondary_nav_items">Status privacy</div>
+                </div>
+                <div id="for_calls_section">
+                    <div id="clear_call_log_selector" class="secondary_nav_items">Clear call logs</div>
+                </div>
+            </div>
+            <div id="settings_selector"  class="secondary_nav_items">
+                Settings
+            </div>
+            <div id="for_archived_section">
+                <div id="invite_friend_selector" class="secondary_nav_items">
+                    Invite a friend
+                </div>
+                <div id="contacts_selector" class="secondary_nav_items">
+                    Contacts
+                </div>
+                <div id="refresh_selector" class="secondary_nav_items">
+                    Refresh
+                </div>
+                <div id="help_selector" class="secondary_nav_items">
+                    Help
+                </div>
+            </div>
+        </div>
+        <div id="mainpage">
+            <nav id="mainpage_nav">
+                <div id="mainpage_nav_firstline">
+                    <div>WhatsApp</div>
+                    <div>
+                        <img src="icons\search_grey.svg" alt="" class="search_icon" id="mainpage_nav_search_icon">
+                        <img src="icons\ellipses_grey.svg" alt="" class="ellipses" id="mainpage_nav_ellipses_icon">
+                    </div>
+                </div>
+                <div id="mainpage_nav_secondline">
+                    <div> <img src="icons\camera_grey.svg" alt="" class="cameraimg"></div>
+                    <div id="mainpage_selector_group" >
+                        <div id="chats_selector" class="mainage_selectors active">CHATS &nbsp; <div id="no_of_unread_chats">2</div></div>
+                        <div id="status_selector" class="mainage_selectors">STATUS &nbsp; <div id="if_new_status"></div> </div>
+                        <div id="calls_selector" class="mainage_selectors">CALLS</div>
+                    </div>
+                </div>
+            </nav>
+            
+            <div id="active_chats">
+                <div id="active_chats_firstline">
+                    <div id="archived_selector">
+                        <img src="icons\archive_grey.svg" alt="" class="archived_img">
+                        <div id="archived_selector_text">Archived</div>
+                    </div>
+                    <div id="number_of_archived">0</div>
+                </div>
+                <div id="activechats_main">
+                    <div id="chatdiv_icon">
+                        <img src="icons\chat_icon.svg" alt="" class="chat_icon">
+                    </div>
+                </div>
+            </div>
+            <div id="status_section">
+                <div id="status_section_firstline">
+                    <div id="status_section_firstline_imgDiv">
+                        <div id="status_section_plusDiv"></div>
+                    </div>
+                    <div id="my_status_text_div">
+                        <div id="mystatus_text1">My Status</div>
+                        <div id="mystatus_text2">Tap to add status update</div>
+                    </div>
+                </div>
+                <div class="status_section_texts">Recent updates</div>
+                <div id="recent_update_status">
+
+                </div>
+                <div class="status_section_texts">Viewed updates</div>
+                <div id="viewed_status">
+
+                </div>
+                <div class="status_section_texts">Muted updates</div>
+                <div id="Muted_status">
+
+                </div>
+                <div id="update_mystatus_section">
+                    <div id="write_newstatus_div">
+                        <img src="icons\white_pencil.svg" alt="" id="writestatus_pencil_icon">
+                    </div>
+                    <div id="upload_newstatus_div">
+                        <img src="icons\camera_grey.svg" alt="" id="newstatus_camera_icon">
+                    </div>
+                </div>
+                
+            </div>
+            <div id="calls_section">
+                <div id="calls_icon_div">
+                    <img src="icons\ordinary_phone_white.svg" alt="" id="call_icon">
+                </div>
+            </div>
+        </div>
+        <div id="archived_page">
+            <div id="archived_page_topsection">
+                <div id="archivedTextAndIcon">
+                    <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="archived_page_arrowback_icon">
+                    <div>Archived</div>
+                </div>
+                <img src="icons\ellipses_grey.svg" alt="" class="ellipses" id="archived_page_ellipses">
+            </div>
+            <div id="archived_page_bottomsection">
+
+            </div>
+        </div>
+        <div id="selectcontact_page">
+            <div id="selectcontact_page_topsection">
+                <div id="selectcontact_page_topsection_p1">
+                    <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="selectcontact_page_arrowback_icon">
+                    <div id="selectcontact_page_topsection_p1_2">
+                        <div id="selectcontact_text">Select Contact</div>
+                        <div id="no_of_contacts_section"><div id="no_of_contacts_div">0</div> &nbsp; <span>contacts</span> </div>
+                    </div>
+                </div>
+                <div id="selectcontact_page_topsection_p2">
+                    <img src="icons\search_grey.svg" alt="" class="search_icon" id="selectcontact_page_search_icon">
+                    <img src="icons\ellipses_grey.svg" alt="" class="ellipses">
+                </div>
+            </div>
+            <div id="selectcontact_page_bottomsection">
+                <div id="select_contact_newGroup">
+                    <div id="newgroup_icon_div">
+                        <img src="icons\search_grey.svg" alt="" id="newgroup_icon">
+                    </div>
+                    <div id="newGroup_text">New Group</div>
+                </div>
+                <div id="select_contact_newContact">
+                    <div id="newcontact_icon_div">
+                        <img src="icons\search_grey.svg" alt="" id="newcontact_icon">
+                    </div>                    
+                    <div id="newcontact_text">New Contact</div>
+                </div>
+            </div>
+        </div>
+        <div id="settings_page">
+            <div id="settings_page_firstline" class="topsections" >
+                <img src="icons\arrowback_white.svg" alt="" id="settings_page_arrowback_icon" class="topsections_icon"> 
+                <div id="settings_page_firstline_text">settings</div>
+             </div>
+             <div id="settings_main_section">
+                 <div id="settings_mainsection_top">
+                     <div id="settings_profile_thumbnail_div">
+                        <img src="icons\user_regular.png" alt="" id="settings_profile_thumbnail">
+                     </div>
+                     <div id="settings_profile_textdiv">
+                         sammy
+                         <div class="minitext">Hey there i am using whatsApp</div>
+                     </div>
+                 </div>
+                 <div id="settings_mainsection_bottom">
+                    <div id="settings_account_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_account_selector_img">
+                        <div class="setting_selector_inner">
+                            Account
+                            <div class="minitext">Privacy, security, change number</div>    
+                        </div>
+                    </div>
+                    <div id="settings_chats_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_chats_selector_img">
+                        <div class="setting_selector_inner">
+                            chats
+                            <div class="minitext">Theme, wallpaper, chat history</div>    
+                        </div>
+                    </div>
+                    <div id="settings_notifications_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_notifications_selector_img">
+                        <div class="setting_selector_inner">
+                            Notifications
+                            <div class="minitext">Message, group & call tones</div>    
+                        </div>
+                    </div>
+                    <div id="settings_storage_data_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_storage_data_selector_img">
+                        <div class="setting_selector_inner">
+                            Storage & data
+                            <div class="minitext">Network usage, auto-download</div>    
+                        </div>
+                    </div>
+                    <div id="settings_help_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_help_selector_img">
+                        <div class="setting_selector_inner">
+                            Help
+                            <div class="minitext">Help center,contact us, privacy policy</div>    
+                        </div>
+                    </div>
+                    <div id="settings_account_selector" class="setting_selectors">
+                        <img src="icons\arrowback_white.svg" alt="" id="settings_account_selector_img">
+                        <div class="setting_selector_inner">
+                            Invite a friend
+                        </div>
+                    </div>
+                    <div id="settings_lastline">
+                        <div class="minitext">from</div>
+                        <div><strong>Meta</strong></div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+        <div id="account_page">
+            <div id="account_page_firstline" class="topsections" >
+               <img src="icons\arrowback_white.svg" alt="" id="account_page_arrowback_icon" class="topsections_icon"> 
+               <div id="account_page_firstline_text">Account</div>
+            </div>
+            <div id="account_page_mainsection">
+                <div id="privacy_selector" class="account_page_mainsection_items">
+                    <img src="icons\arrowback_white.svg" alt="" id="privacy_selector_icon" class="account_page_mainsection_icons">
+                    <div id="privacy_selector_text">Privacy</div>
+                </div>
+                <div id="security_selector" class="account_page_mainsection_items">
+                    <img src="icons\shield_regular_grey.svg" alt="" id="security_selector_icon" class="account_page_mainsection_icons">
+                    <div id="security_selector_text">Security</div>
+                </div>
+                <div id="twostep_verification_selector" class="account_page_mainsection_items">
+                    <img src="icons\arrowback_white.svg" alt="" id="2step_verification_selector_icon" class="account_page_mainsection_icons">
+                    <div id="2step_verification_selector_text">Two-step verification</div>
+                </div>
+                <div id="change_number_selector" class="account_page_mainsection_items">
+                    <img src="icons\arrowback_white.svg" alt="" id="change_number_selector_icon" class="account_page_mainsection_icons">
+                    <div id="change_number_selector_text">Change number</div>
+                </div>
+                <div id="request_account_info_selector" class="account_page_mainsection_items">
+                    <img src="icons\arrowback_white.svg" alt="" id="request_account_info_selector_icon" class="account_page_mainsection_icons">
+                    <div id="request_account_info_selector_text">Request account info</div>
+                </div>
+                <div id="delete_my_account_selector" class="account_page_mainsection_items">
+                    <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_selector_icon" class="account_page_mainsection_icons">
+                    <div id="delete_my_account_selector_text">Delete my account</div>
+                </div>
+            </div>
+        </div>
+        <div id="privacy_page">
+            <div id="privacy_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="privacy_page_arrowback_icon" class="topsections_icon">
+                <div id="privacy_page_firstline_text">Privacy</div>
+            </div>
+            <div id="privacy_page_mainsection">
+                <div id="privacy_page_mainsection_line1">
+                    <div id="privacy_page_mainsection_line1_1" class="privacy_minitext">
+                       <strong> Who can see my personal info </strong>
+                    </div>
+                    <div id="privacy_page_mainsection_line1_2" class="privacy_minitext">
+                        if you don't share your Last Seen, you won't be able to see other peopl's Last Seen
+                    </div>
+                </div>
+                <div id="check_last_seen" class="privacy_page_items">
+                    Last seen <div class="privacy_minitext" id="last_seen_result">Everyone</div>
+                </div>
+                <div id="check_profile_photo" class="privacy_page_items">
+                    Profile photo <div class="privacy_minitext" id="profile_photo_result">Everyone</div>
+                </div>
+                <div id="check_about" class="privacy_page_items">
+                    About <div class="privacy_minitext" id="about_result">Everyone</div>
+                </div>
+                <div id="check_status" class="privacy_page_items">
+                    Status <div class="privacy_minitext" id="status_result">My contacts</div>
+                </div>
+                <div id="read_receipt_section">
+                    <div id="read_receipt_text">
+                        Read receipts
+                        <div id="read_receipts_minitext">
+                            if turned off, you won't send or receive Read receipts. Read receipts are always sent for group chats.
+                        </div>
+                    </div>
+                    <div id="read_receipt_icon_div">
+                        <div  id="read_receipt_icon_1"></div>
+                        <div  id="read_receipt_icon_2"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="privacy_minitext">Disapperaring messages</div>
+                <div id="disappearing_messages_section">
+                    <div id="disappearing_messages_text">
+                        Default message timer
+                        <div class="privacy_minitext" >
+                            Start new chats with disapperaring messages set to your timer
+                        </div>
+                    </div>
+                    <div id="disappearing_messages_icon">Off</div>
+                </div>
+                <hr>
+                <div id="privacy_groups_Selector" class="privacy_page_items">
+                    Groups <div class="privacy_minitext" id="groups_result">Everyone</div>
+                </div>
+                <div id="privacy_live_location" class="privacy_page_items">
+                    Live location <div class="privacy_minitext" id="live_location_result">None</div>
+                </div>
+                <div id="privacy_blocked_contacts" class="privacy_page_items">
+                    Blocked contacts <div class="privacy_minitext" id="blocked_contacts_result">0</div>
+                </div>
+                <div id="privacy_fingerprint" class="privacy_page_items">
+                    Fingerprint lock <div class="privacy_minitext" id="fingerprint_result">Disabled</div>
+                </div>
+            </div>
+        </div>
+        <div id="lastseen_page">
+            <div id="lastseen_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="lastseen_page_arrowback_icon" class="topsections_icon">
+                <div id="lastseen_page_firstline_text">Last seen</div>
+            </div>
+            <div id="lastseen_page_mainsection">
+                <div class="lastseen_text">
+                    Who can see my last seen
+                </div>
+                <div id="lastseen_radiosection">
+                    <div class="radio_div" id="lastseen_everyone">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="lastseen_everyone_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">Everyone</div>
+                    </div>
+                    <div class="radio_div" id="lastseen_my_contacts">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="lastseen_my_contacts_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts</div>
+                    </div>
+                    <div class="radio_div" id="lastseen_my_contacts_except">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="lastseen_my_contacts_except_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts except</div>
+                    </div>
+                    <div class="radio_div" id="lastseen_nobody">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="lastseen_nobody_inner" style="display: none;"></div>
+                        </div>
+                        <div class="radiobtn_text">Nobody</div>
+                    </div>
+                </div>
+                <div class="lastseen_text">
+                    If you don't share your last seen, you won't be able to see other 
+                    people's Last Seen
+                </div>
+            </div>
+            <div id="lastseen_donebtn" class="done_btns">DONE</div>
+        </div>
+        <div id="privacy_profile_photo_page">
+            <div id="privacy_profile_photo_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="privacy_profile_photo_page_arrowback_icon" class="topsections_icon">
+                <div id="privacy_profile_photo_page_firstline_text">Profile photo</div>
+            </div>
+            <div id="privacy_profile_photo_page_mainsection">
+                <div class="privacy_profile_photo_text">
+                    Who can see my Profile photo
+                </div>
+                <div id="privacy_profile_photo_radiosection">
+                    <div class="radio_div" id="privacy_profile_photo_everyone">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="privacy_profile_photo_everyone_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">Everyone</div>
+                    </div>
+                    <div class="radio_div" id="privacy_profile_photo_my_contacts">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_profile_photo_my_contacts_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts</div>
+                    </div>
+                    <div class="radio_div" id="privacy_profile_photo_my_contacts_except">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_profile_photo_my_contacts_except_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts except</div>
+                    </div>
+                    <div class="radio_div" id="privacy_profile_photo_nobody">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="privacy_profile_photo_nobody_inner" style="display: none;"></div>
+                        </div>
+                        <div class="radiobtn_text">Nobody</div>
+                    </div>
+                </div>
+            </div>
+            <div id="privacy_profile_photo_donebtn" class="done_btns">DONE</div>
+        </div>
+        <div id="privacy_about_page">
+            <div id="privacy_about_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="privacy_about_page_arrowback_icon" class="topsections_icon">
+                <div id="privacy_about_page_firstline_text">About</div>
+            </div>
+            <div id="privacy_about_page_mainsection">
+                <div class="privacy_about_text">
+                    Who can see my About
+                </div>
+                <div id="privacy_about_radiosection">
+                    <div class="radio_div" id="privacy_about_everyone">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="privacy_about_everyone_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">Everyone</div>
+                    </div>
+                    <div class="radio_div" id="privacy_about_my_contacts">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_about_my_contacts_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts</div>
+                    </div>
+                    <div class="radio_div" id="privacy_about_my_contacts_except">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_about_my_contacts_except_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts except</div>
+                    </div>
+                    <div class="radio_div" id="privacy_about_nobody">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="privacy_about_nobody_inner" style="display: none;"></div>
+                        </div>
+                        <div class="radiobtn_text">Nobody</div>
+                    </div>
+                </div>
+            </div>
+            <div id="privacy_about_donebtn" class="done_btns">DONE</div>
+        </div>
+        <div id="status_privacy_page">
+            <div id="status_privacy_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="status_privacy_page_arrowback_icon" class="topsections_icon">
+                <div id="status_privacy_page_firstline_text">Status privacy</div>
+            </div>
+            <div id="status_privacy_page_mainsection">
+                <div class="status_privacy_text">
+                    Who can see my status update
+                </div>
+                <div id="status_privacy_radiosection">
+                    <div class="radio_div" id="status_privacy_my_contacts">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="status_privacy_my_contacts_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts</div>
+                    </div>
+                    <div class="radio_div" id="status_privacy_my_contacts_except">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="status_privacy_my_contacts_except_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts except</div>
+                    </div>
+                    <div class="radio_div" id="status_privacy_only_share_with">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="status_privacy_only_share_with_inner" style="display: none;"></div>
+                        </div>
+                        <div class="radiobtn_text">Only share with</div>
+                    </div>
+                </div>
+                <div class="status_privacy_text">
+                   Changes to your privacysettings won't affect status updates that you've sent already
+                </div>
+            </div>
+            <div id="status_privacy_donebtn" class="done_btns">DONE</div>
+        </div>
+        <div id="default_message_timer_page">
+            <div id="default_message_timer_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="default_message_timer_page_arrowback_icon" class="topsections_icon">
+                <div id="default_message_timer_page_firstline_text">Default message timer</div>
+            </div>
+            <div id="default_message_timer_page_mainsection">
+                <div id="default_message_timer_icon_div">
+                    <img src="icons\phone_grey.svg" alt="" id="default_message_timer_icon">
+                </div>
+                <div class="default_message_timer_text">Start new chats with disappearing messages</div>
+                <div id="default_message_timer_radiosection">
+                    <div class="radio_div" id="default_message_timer_24hours">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="default_message_timer_24hours_inner" style="display: none;"></div>
+                        </div>
+                        <div class="radiobtn_text">24 hours</div>
+                    </div>
+                    <div class="radio_div" id="default_message_timer_7days">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="default_message_timer_7days_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">7 days</div>
+                    </div>
+                    <div class="radio_div" id="default_message_timer_90days">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="default_message_timer_90days_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">90 days</div>
+                    </div>
+                    <div class="radio_div" id="default_message_timer_off">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="default_message_timer_off_inner" ></div>
+                        </div>
+                        <div class="radiobtn_text">Off</div>
+                    </div>
+                </div>
+                <div class="default_message_timer_text">
+                    When enabled all new individual chats will start with disappearing messages set to the selected duration 
+                    . This will not affect your existing chats. <span style="color: #64c4e4;">Learn more</span> 
+                </div>
+            </div>
+        </div>
+        <div id="privacy_groups_page">
+            <div id="privacy_groups_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="privacy_groups_page_arrowback_icon" class="topsections_icon">
+                <div id="privacy_groups_page_firstline_text">Groups</div>
+            </div>
+            <div id="privacy_groups_page_mainsection">
+                <div class="privacy_group_text">Who can add me to groups</div>
+                <div id="privacy_groups_radiosection">
+                    <div class="radio_div" id="privacy_groups_everyone">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" id="privacy_groups_everyone_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">Everyone</div>
+                    </div>
+                    <div class="radio_div" id="privacy_groups_my_contacts">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_groups_my_contacts_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts</div>
+                    </div>
+                    <div class="radio_div" id="privacy_groups_my_contacts_except">
+                        <div class="radiobtn_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="privacy_groups_my_contacts_except_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">My contacts except</div>
+                    </div>
+                </div>
+                <div class="privacy_group_text">
+                    Admins who can't add you to a group chat will have the option of inviting you privately instead
+                </div>
+                <div id="privacy_groups_donebtn" class="done_btns">DONE</div>
+            </div>
+        </div>
+        <div id="blocked_contacts_page">
+            <div id="blocked_contacts_page_topsection">
+                <div id="blocked_contacts_page_1">
+                    <img src="icons\arrowback_white.svg" alt="" id="blocked_contacts_page_arrowback_icon">
+                    Blocked contacts
+                </div>
+                <div>
+                    <img src="icons\arrowback_white.svg" alt="" id="block_newcontact_icon">
+                </div>
+            </div>
+            <div id="blocked_contacts_page_mainsection">
+                <div class="minitext">contacts</div>   
+            </div>
+        </div>
+        <div id="security_page">
+            <div id="security_page_firstline" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="security_page_arrowback_icon" class="topsections_icon">
+                <div id="security_page_firstline_text">Security</div>
+            </div>
+            <div id="security_page_mainsection">
+                <div id="security_image_div">
+                    <div id="security_image_div_inner">
+                        <img src="icons\shield_lock_black.svg" alt="" id="security_image">
+                    </div>
+                </div>
+                <div>
+                    Messages and calls in end-to-end encrypted chats stay between you and the people 
+                    you choose. Not even whatsApp can read or listen to them. <span style="color: #64c4e4;">Learn more</span>
+                </div>
+                <hr>
+                <div id="security_lowersection" >
+                    <div id="security_text_2txt">
+                        <div id="security_text_2txt_heading">
+                            Show security notifications on this phone
+                        </div>
+                        <div id="security_text_2txt_body">
+                            Get notified when your security code changes for a contacts's
+                            phone in an end-to-end encrypted chat. this setting must be enabled on each device where you want
+                            to get notifications. <span style="color: #64c4e4;">Learn more</span>
+                        </div>
+                    </div>
+                    <div id="security_notification_switch_div">
+                        <div id="security_notification_switch">
+                        </div>
+                        <div id="security_notification_switch_ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="twostep_verification_page">
+            <div id="twostep_verification_page_firstline" class="topsections">
+            <img src="icons\arrowback_white.svg" alt="" id="twostep_verification_page_arrowback_icon" class="topsections_icon">
+            Two-step verification
+            </div>
+            <div class="bottomsections">
+                <div id="twostep_verification_page_icon_div">
+                    <img src="icons\shield_lock_black.svg" alt="" id="twostep_verification_page_icon">
+                </div>
+                <div id="twostep_verification_page_text">
+                    For added security, enamble two-step verification,
+                    which will require a PIN when registering your phone number with whatsApp again.
+                </div>
+                <div id="twostep_verification_page_button" class="done_btns">ENABLE</div>
+            </div>
+        </div>
+        <div id="change_number_page">
+            <div id="change_number_page_firstline" class="topsections">
+            <img src="icons\arrowback_white.svg" alt="" id="change_number_page_arrowback_icon" class="topsections_icon">
+            Change number
+            </div>
+            <div id="change_number_one" class="bottomsections">
+                <div id="change_number_page_icon_div">
+                    <img src="icons\shield_lock_black.svg" alt="" id="change_number_page_icon">
+                </div>
+                <div id="change_number_page_text_1">
+                    Changing your phone number will migrate your account info, groups & settings.
+                </div>
+                <div id="change_number_page_text_2">
+                    before proceeding, please confirm that you are able to receive SMS or calls at your new number <br>
+                    <br>
+                    If you have both a new phone & a new number, first change your number on your old phone. 
+                    <div id="change_number_one_button" class="done_btns">NEXT</div>
+                </div>
+            </div>
+            <div id="change_number_two" class="bottomsections">
+                <div class="change_number_two_textdivs">
+                    <div class="change_number_two_texts">
+                        Enter your old phone number with country code:
+                    </div>
+                    <div class="change_number_two_number_section">
+                        <input class="enter_countrycode" placeholder="+ 1">
+                        <input class="enter_phonenumber" placeholder="Phone number">
+                    </div>
+                </div>
+                <div class="change_number_two_textdivs">
+                    <div class="change_number_two_texts">
+                        Enter your old phone number with country code:
+                    </div>
+                    <div class="change_number_two_number_section">
+                        <input class="enter_countrycode" placeholder="+ 1">
+                        <input class="enter_phonenumber" placeholder="Phone number">
+                    </div>
+                </div>
+                <div id="change_number_two_button" class="done_btns">NEXT</div>
+                
+            </div>
+        </div>
+        <div id="request_account_info_page">
+            <div id="request_account_info_topsection" class="topsections">
+            <img src="icons\arrowback_white.svg" alt="" id="request_account_info_page_arrowback_icon" class="topsections_icon">
+            Request account info
+            </div>
+            <div id="request_account_info_mainsection" class="bottomsections">
+                <div id="request_account_info_image_div">
+                    <div id="request_account_info_image_div_inner">
+                        <img src="icons\shield_lock_black.svg" alt="" id="request_account_info_image">
+                    </div>
+                </div>
+                <div id="request_account_info_text">
+                    Create a report of your WhatsApp account information and settings,
+                    which you can access or port to another app.
+                    This report does not include your message. <span style="color: #64c4e4;">Learn more</span>
+                </div>
+                <div id="request_account_info_request_report" >
+                    <img src="icons\arrowback_white.svg" style="margin-right: 25px;" alt="">
+                    Request report
+                </div>
+            </div>
+        </div>
+        <div id="delete_my_account_page">
+            <div id="delete_my_account_topsection" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_page_arrowback_icon" class="topsections_icon">
+                Delete my account
+            </div>
+            <div id="delete_my_account_mainsection" class="bottomsections">
+                <div id="delete_my_account_lineone" style="color: #c76161;">
+                    <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_iconOne">
+                    <div >
+                        Deleting your account will:
+                    </div>
+                </div>
+                <div id="delete_my_account_linetwo">
+                    <ul id="delete_itemList">
+                        <li>Delete your account from WhatsApp</li>
+                        <li>Erase your message history</li>
+                        <li>Delete you from all your WhatsAp groups</li>
+                    </ul>
+                </div>    
+                <div id="delete_my_account_linethree">
+                    <div style="display: flex; padding-top: 15px;">
+                        <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_iconTwo">
+                        <div >Change number instead?</div>
+                    </div>
+                    
+                    <button id="change_number_selector_button" style="margin: 15px 0; margin-left: 50px; ">
+                        CHANGE NUMBER
+                    </button>
+                </div>
+                <div id="delete_my_account_linefour">
+                    To delete our account, confirm your country code and enter your phone number.
+                    <div id="select_country_div">
+                        <div id="select_country_div_text" style="margin-top: 20px;">country</div>
+                        <input type="text" id="input_country_name">
+                        <div class="change_number_two_textdivs" style="margin: 25px 0;">
+                            <div class="change_number_two_texts">
+                                Phone
+                            </div>
+                            <div class="change_number_two_number_section">
+                                <input class="enter_countrycode" placeholder="+ 1">
+                                <input class="enter_phonenumber" placeholder="Phone number">
+                            </div>
+                        </div>
+                        <button id="delete_my_account_button">DELETE MY ACCOUNT</button>
+                    </div>
+                </div>
+
+            </div>    
+        </div>
+
+        <div id="contact_navigation_section">
+            <div id="contact_nav_firstpage">
+                <div class="contact_nav_items" id="contact_nav_view_contact">
+                    View contact
+                </div>
+                <div class="contact_nav_items" id="contact_nav_media_links">
+                    Media, Links, and docs
+                </div>
+                <div class="contact_nav_items" id="contact_nav_search">
+                    Search   
+                </div>
+                <div class="contact_nav_items" id="contact_nav_mute_notifications">
+                    Mute notifications 
+                </div>
+                <div class="contact_nav_items" id="contact_nav_disappearing_messages">
+                    Disappearing messages 
+                </div>
+                <div class="contact_nav_items" id="contact_nav_wallpaper">
+                    Wallpaper 
+                </div>
+                <div class="contact_nav_items" id="contact_nav_more">
+                    More 
+                </div>    
+            </div>
+            <div id="contact_nav_secondpage" style="display: none;">
+                <div class="contact_nav_items" id="contact_nav_report">
+                    Report
+                </div>
+                <div class="contact_nav_items" id="contact_nav_block">
+                    Block
+                </div>
+                <div class="contact_nav_items" id="contact_nav_clear_chat">
+                    Clear chat
+                </div>
+                <div class="contact_nav_items" id="contact_nav_export_chat">
+                    Export chat 
+                </div>
+                <div class="contact_nav_items" id="contact_nav_add_shortcut">
+                    Add shortcut      
+                </div>    
+            </div>
+        </div>
+        <div id="contact_info_page">
+            <div id="contact_info_topsection" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" id="contact_info_page_arrowback_icon" class="topsections_icon">
+                <img src="" alt="" id="contact_profile_picture_thumbnail">
+                <img src="" alt="" id="contact_info_page_ellipses">
+            </div>    
+            <div id="contact_info_mainsection" class="bottomsections">
+                <div id="contact_info_profile_div">
+                    <div id="contact_info_profile_picture_div">
+                        <div id="contact_info_profile_picture_inner_div">
+                            <img src="icons\shield_lock_black.svg" alt="" id="contact_info_profile_picture">
+                        </div>
+                    </div>
+                    <div id="contact_info_name">Amanda</div>
+                    <div id="contact_info_number">q564532413546</div>
+                    <div id="contact_info_icons_div">
+                        <div id="contact_info_audio_icon_div">
+                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_audio_icon">
+                            <div class="contact_info_icons_text">Audio</div>
+                        </div>
+                        <div id="contact_info_video_icon_div">
+                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_video_icon">
+                            <div class="contact_info_icons_text">Video</div>
+                        </div>
+                        <div id="contact_info_search_icon_div">
+                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_search_icon">
+                            <div class="contact_info_icons_text">Search</div>  
+                        </div >      
+                    </div>
+                </div>
+                <div id="contact_info_tagline_div">
+                    <div id="contact_info_tagline" >Available</div>
+                    <div id="contact_info_tagline_date" >June 19, 2019</div>
+                </div>
+                <div id="contact_info_media_links_docs_div">
+                    Media, links and docs
+                </div>
+                <div id="contact_info_notification_section">
+                    <div id="contact_info_mute_notification_div" class="contact_info_notification_items">
+                        <div id="contact_info_mute_notification_icon_div" class="contact_info_media_visibility_icons">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>
+                        <div id="contact_info_mute_notification_text">
+                            Mute notifications
+                        </div>
+                        <div id="contact_info_mute_notification_switch">
+                            <div id="contact_info_div1"></div>
+                            <div id="contact_info_div2"></div>
+                        </div>
+                    </div>
+                    <div id="contact_info_custom_notification_div" class="contact_info_notification_items">
+                        <div id="contact_info_custom_notification_icon_div" class="contact_info_media_visibility_icons">
+                            <img src="icons\ellipses_grey.svg" alt="">
+                        </div>
+                        <div>Custom notification</div>
+                    </div>
+                    <div id="contact_info_media_visibility" class="contact_info_notification_items">
+                        <div id="contact_info_media_visibility_icon_div" class="contact_info_media_visibility_icons">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>
+                        <div>Media visibility</div>
+                    </div>
+                </div>
+                <div id="contact_info_encryption_section">
+                    <div id="contact_info_encryption_div">
+                        <div class="contact_info_encryption_icons">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>
+                        <div class="contact_info_encryption_text">
+                            <div style="margin-bottom: 5px; ">Encryption</div>
+                            <div style="color: grey;">Messages and calls are end-to-end encrypted. Tap to verify.</div>
+                        </div>
+                    </div>
+                    <div id="contact_info_disappearing_messages_div">
+                        <div class="contact_info_encryption_icons">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>
+                        <div class="contact_info_encryption_text">
+                            <div style="margin-bottom: 5px;">Disappearing messages</div>
+                            <div style="color: grey;">Off</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact_info_groups_section">
+                    <div style="margin-bottom: 20px;">1 group in common</div>
+                    <div id="contact_info_create_group_div">
+                        <div id="contact_info_create_group_icon_div">
+                            <div id="contact_info_create_group_icon_div_inner">
+                                <img src="icons\ellipses_grey.svg" alt="" >
+                            </div>
+                        </div>
+                        <div id="contact_info_create_group_text">
+                            Create group with Amanda 
+                        </div>
+                    </div>
+                </div>
+                <div id="contact_info_block_and_report_section">
+                    <div id="contact_info_block_div">
+                        <div class="contact_info_block_icon_div">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>   
+                        <div>Block Amanda</div>
+                    </div>     
+                    <div id="contact_info_report_div">
+                        <div class="contact_info_block_icon_div">
+                            <img src="icons\ellipses_grey.svg" alt="" >
+                        </div>   
+                        <div>Report Amanda</div>
+                    </div>     
+                </div>
+            </div>    
+        </div>
+        
+    </div>
+    
+
+
+    <script src="/app.js"></script>
+</body>
+</html>

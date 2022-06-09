@@ -1,0 +1,1109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+#mainpage{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#mainpage_nav{
+    height: 16%;
+    width: 100%;
+    background-color: #23333d ;
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+}
+#mainpage_nav_firstline{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 23px;
+    color: darkgray;
+    height: 50%;
+}
+#mainpage_nav_ellipses_icon{
+    margin-left: 20px;
+}
+#secondary_navigation,#contact_navigation_section{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    z-index: 2;
+    background-color: #303d46;
+    width: 56%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    display: none;
+}
+.contact_nav_items{
+    padding: 14px 9px;
+}
+
+#for_archived_section,#for_status_section,#for_calls_section{
+    display: none;
+}
+.secondary_nav_items{
+    padding: 12px;
+}
+#mainpage_nav_secondline{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    height: 40%;
+}
+.cameraimg{
+    padding-left: 8px;
+}
+#mainpage_selector_group{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: darkgrey;
+    height: 100%;
+}
+.mainage_selectors{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active{
+    border-bottom: 2px solid #1EBEA5;
+}
+
+
+#no_of_unread_chats{
+    min-width: 20px;
+    min-height: 20px;
+    padding: 2px;
+    height: auto;
+    width: auto;
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    color: black;
+}
+#if_new_status{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    position: relative;
+}
+#active_chats{
+    background-color: hsl(212 26% 11%);
+    height: 84%;
+    padding: 1em;
+}
+
+#archived_selector{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+#archived_selector_text{
+    font-size: 20px;
+}
+#number_of_archived{
+    color: #1EBEA5;
+}
+#active_chats_firstline{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#chatdiv_icon{
+    position: absolute;
+    bottom: 1.5em;
+    right: 10px;
+    background-color: #1EBEA5;
+    padding: 13px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.chat_icon{
+    width: 30px;
+}
+
+
+#status_section{
+    width: 100%;
+    min-height: 84%;
+    height: auto;
+    background-color: hsl(212 26% 11%);
+    padding: 15px;
+    display: none;
+}
+#status_section_firstline{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+#status_section_firstline_imgDiv{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: grey;
+    margin-right: 15px;
+    display: flex;
+}
+#status_section_plusDiv{
+    width: 25px;
+    height: 25px;
+    background-color: #1EBEA5;
+    margin-top: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 1px solid hsl(212 26% 11%);
+}
+#mystatus_text1{
+    font-size: 20px;
+    position: relative;
+    top: -5px;
+}
+#mystatus_text2{
+    color: darkgrey;
+}
+.status_section_texts{
+    color: darkgrey;
+}
+
+#update_mystatus_section{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#write_newstatus_div{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #23333d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+#upload_newstatus_div{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#writestatus_pencil_icon{
+    width: 16px;
+}
+
+#calls_section{
+    width: 100%;
+    min-height: 84%;
+    height: auto;
+    background-color: hsl(212 26% 11%);
+    padding: 15px;
+    display: none;
+}
+#call_icon{
+    width: 30px;
+}
+#calls_icon_div{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;    
+}
+#archived_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.arrowback_icon{
+   padding-right: 20px;
+}
+
+#archived_page_topsection{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23333d;
+    padding: 15px;
+}
+#archivedTextAndIcon{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+#archived_page_bottomsection{
+    width: 100%;
+    height: 90%;
+    background-color: hsl(212 26% 11%);
+}
+#selectcontact_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#selectcontact_page_topsection{
+    width: 100%;
+    height: 10%;
+    background-color: #23333d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+#selectcontact_page_topsection_p1{
+    display: flex;
+    align-items: center;
+}
+#selectcontact_page_topsection_p1_2{
+    margin-right: 20px;
+}
+#selectcontact_page_arrowback_icon{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+#selectcontact_text{
+    font-size: 1.5em;
+}
+#no_of_contacts_section{
+    display: flex;
+}
+#selectcontact_page_search_icon{
+    margin: 0 10px;
+}
+#selectcontact_page_bottomsection{
+    width: 100%;
+    height: 90%;
+    background-color:  hsl(212 26% 11%);
+    padding: 20px;
+}
+#select_contact_newGroup,#select_contact_newContact{
+    display: flex;
+    align-items: center;
+    height: 11%;
+}
+#newgroup_icon_div,#newcontact_icon_div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#newGroup_text,#newcontact_text{
+    margin-left: 18px;
+    font-size: 19px;
+}
+
+#settings_page{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: hsl(212 26% 11%);
+    display: none;
+    /* height: auto;background-color: red; */
+}
+
+#settings_main_section{
+    width: 100%;
+    height: 90%;
+    background-color: hsl(212 26% 11%);
+    font-size: 20px;
+}
+#settings_mainsection_top{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 23px;
+}
+#settings_profile_thumbnail_div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.setting_selectors{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+.setting_selector_inner{
+    margin-left: 20px;
+}
+#settings_lastline{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    position: relative;
+    top: 2em;
+}
+.minitext{
+    color: darkgrey;
+    font-size: 16px;
+    top: 3px;
+}
+
+#account_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.topsections{
+    width: 100%;
+    min-height: 50px;
+    height: 9%;
+    background-color: #23333d;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.topsections_icon{
+    margin-right: 30px;
+}
+#account_page_mainsection{
+    width: 100%;
+    height: 91%;
+    background-color: hsl(212 26% 11%);
+    padding: 10px 30px;
+    color: darkgrey;
+}
+.account_page_mainsection_items{
+    display: flex;
+    margin: 30px 0;
+    font-size: 20px;
+}
+.account_page_mainsection_icons{
+    margin-right: 20px;
+}
+
+#privacy_page{
+    width: 100%;
+    height: auto;
+    display: none;
+    color: #dadada;
+}
+
+#privacy_page_mainsection{
+    width: 100%;
+    height: 90%;
+    background-color: hsl(212 26% 11%);
+    padding: 30px;
+}
+#privacy_page_mainsection_line1_1{
+    margin-bottom: 7px;
+}
+#privacy_page_mainsection_line1_2{
+    margin-bottom: 15px;
+}
+.privacy_page_items{
+    font-size: 20px;
+    padding: 15px 0;
+}
+.privacy_minitext{
+    font-size: 15px;
+    margin: 5px 0;
+    color: #a5a5a5;
+}
+#read_receipt_section{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+#read_receipt_text{
+    font-size: 20px;
+    width: 80%;
+}
+#read_receipts_minitext{
+    font-size: 16px;
+}
+#read_receipt_icon_div{
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#read_receipt_icon_1{
+    position: absolute;
+    width: 40px;
+    height: 18px;
+    background-color: grey;
+    opacity: 0.3;
+    border-radius: 20px;
+}
+#read_receipt_icon_2{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 20px;
+    top: -3px;
+    left: -10px;
+}
+
+hr{
+    margin: 20px 0;
+    height: 0.08px;
+    background-color: grey;
+    border: none;
+}
+#disappearing_messages_text{
+    font-size: 20px;
+    width: 80%;
+}
+#disappearing_messages_section{
+    margin: 20px 0;
+    display: flex;
+}
+#lastseen_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#privacy_profile_photo_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#privacy_about_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#status_privacy_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#default_message_timer_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#privacy_groups_page{
+    background-color: hsl(212 26% 11%);
+    min-height: 100%;
+    height: auto;
+    display: none;
+}
+#default_message_timer_page_mainsection,#privacy_groups_page_mainsection,
+#lastseen_page_mainsection,#privacy_profile_photo_page_mainsection,
+#privacy_about_page_mainsection,#status_privacy_page_mainsection
+
+{
+    height: auto;
+    padding: 25px;
+}
+
+.lastseen_text,.privacy_profile_photo_text,.privacy_about_text,
+.status_privacy_text,.default_message_timer_text,.privacy_group_text
+
+{
+    color: #969ea3;
+    font-size: 17px;
+}
+.radio_div{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+.radiobtn_outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #1EBEA5;
+    margin: 0 20px;
+}
+.radiobtn_inner{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+}
+.done_btns{
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    transform: translate(50%);
+    background-color: #1EBEA5;
+    font-size: 20px;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 5px;
+}
+
+#blocked_contacts_page{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: none;
+}
+#blocked_contacts_page_topsection{
+    display: flex;
+    height: 9%;
+    background-color: #23333d;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#blocked_contacts_page_1{
+    display: flex;
+    align-items: center;
+}
+#blocked_contacts_page_arrowback_icon{
+    margin-right: 30px;
+}
+#blocked_contacts_page_mainsection{
+    width: 100%;
+    min-height: 91%;
+    height: auto;
+    background-color:  hsl(212 26% 11%);
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+#security_page{
+    width: 100%;
+    height: 100%;
+    color: #dadada;
+    display: none;
+    /* outline: 3px solid red; */
+}
+#security_page_mainsection{
+    width: 100%;
+    height: 91%;
+    background-color: hsl(212 26% 11%);
+    padding: 20px 25px;
+    font-size: 20px;
+}
+#security_image_div{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#security_image_div_inner{
+    width: 130px;
+    height: 130px;
+    background-color: #1EBEA5;
+    opacity: 0.2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#security_image{
+    width: 110px;
+}
+#security_lowersection{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+#security_text_2txt{
+    width: 80%;
+}
+#security_text_2txt_body{
+    font-size: 16px;
+    color: #808080;
+}
+#security_notification_switch_div{
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+#security_notification_switch{
+    width: 35px;
+    height: 17px;
+    opacity: 0.5;
+    background-color: rgb(158, 159, 167);
+    border-radius: 30px;
+    position: absolute;
+}
+#security_notification_switch_ball{
+    width: 25px;
+    background-color: rgb(210, 218, 231);
+    opacity: 1;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    left: -10px;
+    top: -3px;   
+}
+.switch_on{
+    background-color: red;
+}
+
+.bottomsections{
+    width: 100%;
+    height: 91%;
+    background-color: hsl(212 26% 11%);
+    padding: 20px;
+}
+#twostep_verification_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#twostep_verification_page_icon_div,#change_number_page_icon_div{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#twostep_verification_page_icon,#change_number_page_icon{
+    width: 130px;
+}
+#twostep_verification_page_text{
+    line-height: 1.3;
+    color: #969ea3;
+}
+#change_number_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#change_number_one{
+    /* display: none; */
+}
+#change_number_two{
+    font-size: 19px;
+    display: none;
+}
+.change_number_two_textdivs{
+    margin: 5px;
+    margin-bottom: 50px;
+}
+#enter_countrycode_div{
+    width: 60px;
+    height: 40px;
+}
+.enter_countrycode{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    color: #969ea3;
+    background-color: hsl(212 26% 11%);
+    border : none;
+    border-bottom: 2px solid white;
+    margin-right: 20px;
+}
+.enter_phonenumber{
+    width: 70%;
+    height: 40px;
+    font-size: 20px;
+    color: #969ea3;
+    background-color: hsl(212 26% 11%);
+    border : none;
+    border-bottom: 2px solid white;
+}
+#request_account_info_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#request_account_info_image_div{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#request_account_info_image{
+    width: 130px;
+}
+#request_account_info_request_report{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    border-top: 0.1px solid rgba(128, 128, 128, 0.158);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.158);
+    padding: 25px;
+    width: 100vw;
+    position: relative;
+    left: -20px;
+    font-size: 20px;
+
+}
+#delete_my_account_page{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#delete_my_account_lineone{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+#delete_my_account_iconOne,#delete_my_account_iconTwo{
+    margin-right: 20px;
+}
+#delete_my_account_linetwo{
+    margin: 20px 0;
+    margin-left: 50px;
+    color: #969ea3;
+    font-size: 18px;
+}
+#delete_itemList li{
+    margin: 5px 0;
+}
+#delete_my_account_linethree{
+    margin: 20px 0;
+    color: #dadada;
+    font-size: 18px;
+}
+#change_number_selector_button{
+    background-color: #1EBEA5;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+#delete_my_account_linefour{
+    margin-left: 50px;
+}
+#delete_my_account_button{
+    background-color: rgb(172, 84, 84);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.contact_div{
+    width: 100%;
+    height: 70px;
+    background-color: #364855;
+    margin: 10px 0;
+    display: flex;
+}
+.contact_div_image_section{
+    width: 20%;
+    height: 100%;
+    background-color: red;
+}
+.contact_div_name_section{
+    width: 80%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+.contact_name{
+    font-size: 20px;
+    color: white;
+}
+.chat_page{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    background-color: #182229;
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+}
+.chat_page_topsection{
+    width: 100%;
+    height: 50px;
+    background-color: #364855;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name_backarrow_group{
+    display: flex;
+    align-items: center;
+}
+.chat_page_input_section{
+    /* position: absolute; */
+    bottom: 00px;
+    height: 51px;
+    background-color: red;
+    margin-top: auto;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.chat_page_inut_div{
+    width:85%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #364855;
+    display: flex;
+}
+.audio_icon_div{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1EBEA5;
+    border-radius: 50%;
+}
+.chat_page_emoji_icon_div{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1EBEA5;
+}
+.chat_page_input{
+    width: 60%;
+    height: 100%;
+    color: grey;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+.chat_page_input_section_icons_div{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #23333d;
+}
+#contact_info_page{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+#contact_info_profile_picture_div{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#contact_info_profile_picture_inner_div{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #364855;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_info_name{
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+}
+#contact_info_number{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    margin: 10px 0;
+}
+#contact_info_icons_div{
+    display: flex;
+    padding: 10px 18%;
+    justify-content: space-evenly;
+}
+.contact_info_icons_text{
+    margin-top: 6px;
+    color: #1EBEA5;
+    font-size: 18px;
+}
+#contact_info_mainsection{
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+#contact_info_profile_div{
+    background-color: #182229;
+}
+#contact_info_tagline_div,#contact_info_media_links_docs_div,#contact_info_groups_section
+{
+    margin: 15px 0;
+    background-color: #182229;
+    padding: 20px;
+}
+#contact_info_notification_section,#contact_info_block_and_report_section{
+    margin: 0;
+    background-color: #182229;
+}
+#contact_info_encryption_section{
+    margin: 15px 0;
+    background-color: #182229;
+    padding: 20px 0;
+}
+#contact_info_tagline{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#contact_info_tagline_date{
+    font-size: 16px;
+    color: grey;
+}
+#contact_info_mute_notification_div{
+    width: 100%;
+    display: flex;
+}
+#contact_info_mute_notification_text{
+    width: 60%;
+}
+#contact_info_mute_notification_switch{
+    width: 20%;
+}
+#contact_info_div1{
+    width: 40px;
+    height: 18px;
+    background-color: #303d46;
+    border-radius: 20px;
+    position: absolute;
+}
+#contact_info_div2{
+    width: 23px;
+    height: 23px;
+    background-color: #6d928d;
+    border-radius: 50%;
+    position: relative;
+    top: -3px;
+}
+.contact_info_notification_items{
+    padding: 20px 0;
+    font-size: 20px;
+}
+#contact_info_custom_notification_div{
+    width: 100%;
+    display: flex;
+}
+#contact_info_media_visibility{
+    width: 100%;
+    display: flex;
+}
+.contact_info_media_visibility_icons,.contact_info_encryption_icons,.contact_info_block_icon_div{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_info_encryption_div{
+    width: 100%;
+    display: flex;
+    padding-bottom: 15px ;
+}
+#contact_info_disappearing_messages_div{
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+}
+.contact_info_encryption_text{
+    width: 80%;
+}
+#contact_info_create_group_div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#contact_info_create_group_icon_div{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_info_create_group_icon_div_inner{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1EBEA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact_info_create_group_text{
+    padding-left: 10px;
+}
+#contact_info_block_div,#contact_info_report_div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 20px;
+    color: rgb(172, 84, 84);
+}
+#contact_info_block_and_report_section{
+    margin-bottom: 60px;
+}
