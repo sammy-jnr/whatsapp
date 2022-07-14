@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Noto+Sans:wght@300;500&family=Poppins:wght@200&family=Roboto:wght@400;500;700&family=Sora:wght@400;700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -53,40 +56,59 @@
         <div id="mainpage">
             <nav id="mainpage_nav">
                 <div id="mainpage_nav_firstline">
-                    <div>WhatsApp</div>
-                    <div>
-                        <img src="icons\search_grey.svg" alt="" class="search_icon" id="mainpage_nav_search_icon">
-                        <img src="icons\ellipses_grey.svg" alt="" class="ellipses" id="mainpage_nav_ellipses_icon">
+                    <div style="font-size: 23px;">WhatsApp</div>
+                    <div id="random_mainpage_div">
+                        <img src="icons\search_milk.svg" alt="" class="search_icon icons" id="mainpage_nav_search_icon">
+                        <img src="icons\ellipsis_vertical_icon (1).svg" alt=""  id="mainpage_nav_ellipses_icon">
                     </div>
                 </div>
-                <div id="mainpage_nav_secondline">
-                    <div> <img src="icons\camera_grey.svg" alt="" class="cameraimg"></div>
-                    <div id="mainpage_selector_group" >
-                        <div id="chats_selector" class="mainage_selectors active">CHATS &nbsp; <div id="no_of_unread_chats">2</div></div>
-                        <div id="status_selector" class="mainage_selectors">STATUS &nbsp; <div id="if_new_status"></div> </div>
-                        <div id="calls_selector" class="mainage_selectors">CALLS</div>
+                <div id="mainpage_iconsline">
+                    <div class="mainpage_iconsline_one">
+                        <img src="icons\arrowback_white.svg" alt="" class="iconsline" id="iconsline_arrowback_icon">
+                        <div id="selected_contact_no">1</div>
+                    </div>
+                    <div class="mainpage_iconsline_two">
+                        <img src="icons\arrowback_white.svg" alt="" class="iconsline" id="pin_to_top">
+                        <img src="icons\trash_white.svg" alt="" class="iconsline" id="delete_homepage">
+                        <img src="icons\trash_white.svg" alt="" class="iconsline" id="mute_notification_homePage">
+                        <img src="icons\archive_white.svg" alt="" class="iconsline" id="archive_this_chat">
+                        <img src="icons\ellipsis_vertical_icon (1).svg" alt="" class="iconsline">
+
                     </div>
                 </div>
             </nav>
+            <div id="mainpage_nav_secondline">
+                <div> <img src="icons\camera_milk.svg" alt="" class="cameraimg icons"></div>
+                <div id="mainpage_selector_group" >
+                    <div id="chats_selector" class="mainage_selectors active">CHATS &nbsp; <div id="no_of_unread_chats">2</div></div>
+                    <div id="status_selector" class="mainage_selectors">STATUS &nbsp; <div id="if_new_status"></div> </div>
+                    <div id="calls_selector" class="mainage_selectors">CALLS</div>
+                </div>
+            </div>
             
             <div id="active_chats">
                 <div id="active_chats_firstline">
                     <div id="archived_selector">
-                        <img src="icons\archive_grey.svg" alt="" class="archived_img">
+                        <img src="icons\archive_green.svg" alt="" >
                         <div id="archived_selector_text">Archived</div>
                     </div>
                     <div id="number_of_archived">0</div>
                 </div>
+                <div id="activechat_chats">
+                    
+                </div>
                 <div id="activechats_main">
                     <div id="chatdiv_icon">
-                        <img src="icons\chat_icon.svg" alt="" class="chat_icon">
+                        <img src="icons\chat_white.svg" alt="" class="chat_icon" style="width: 26px;">
                     </div>
                 </div>
             </div>
             <div id="status_section">
                 <div id="status_section_firstline">
                     <div id="status_section_firstline_imgDiv">
-                        <div id="status_section_plusDiv"></div>
+                        <div id="status_section_plusDiv">
+                            <img src="icons\plus.svg" alt="" style="width: 18px;">
+                        </div>
                     </div>
                     <div id="my_status_text_div">
                         <div id="mystatus_text1">My Status</div>
@@ -97,11 +119,15 @@
                 <div id="recent_update_status">
 
                 </div>
-                <div class="status_section_texts">Viewed updates</div>
+                <div class="status_section_texts">
+                    <!-- Viewed updates -->
+                </div>
                 <div id="viewed_status">
 
                 </div>
-                <div class="status_section_texts">Muted updates</div>
+                <div class="status_section_texts">
+                    <!-- Muted updates -->
+                </div>
                 <div id="Muted_status">
 
                 </div>
@@ -110,7 +136,7 @@
                         <img src="icons\white_pencil.svg" alt="" id="writestatus_pencil_icon">
                     </div>
                     <div id="upload_newstatus_div">
-                        <img src="icons\camera_grey.svg" alt="" id="newstatus_camera_icon">
+                        <img src="icons\camera_white.svg" alt="" id="newstatus_camera_icon" >
                     </div>
                 </div>
                 
@@ -119,6 +145,60 @@
                 <div id="calls_icon_div">
                     <img src="icons\ordinary_phone_white.svg" alt="" id="call_icon">
                 </div>
+                <div id="call_section_info">no calls</div>
+            </div>
+        </div>
+        <div id="capture_page">
+            <video autoplay id="newvid"></video>
+            <div id="capture_page_capturebtn">camera</div>
+            <div id="capture_page_videobtn">video</div>
+        </div>
+        <div id="show_video_page">
+            <img src="icons\arrowback_black.svg" alt="" id="show_video_page_arrowback_icon">
+            <video src="" controls="controls" id="show_video_page_videosection"></video>
+        </div>
+        <div id="show_image_page">
+            <img src="icons\arrowback_black.svg" alt="" id="show_image_page_arrowback_icon">
+            <div id="show_image_page_imagesection_container" >
+                <img src="" alt="" id="show_image_page_imagesection">
+            </div>
+        </div>
+        <div id="write_status_page">
+            <textarea name="" id="write_status_page_textarea" placeholder="Type a status"></textarea>
+            <div id="write_status_page_iconsdiv">
+                <img src="icons\white_pencil.svg" alt="" id="write_status_page_pencil_icon" class="icons">
+                <img src="icons\camera_white.svg" alt="" id="write_status_page_camera_icon" class="icons">
+                <img src="icons\color_pallete.svg" alt="" id="write_status_page_camera_icon" class="icons">
+            </div>
+            <div id="write_status_page_send_div">
+                <img src="icons\send_white.svg" alt="" id="write_status_page_send_icon" >
+            </div>
+        </div>
+        <div id="view_status_page">
+            <div id="view_status_page_barsection"></div>
+            <div id="view_status_page_topsection">
+                <img src="icons\arrowback_white.svg" alt="" id="view_status_page_arrowback_icon">
+                <div id="view_status_page_thumbnail_div"></div>
+                <div>
+                    <div>My status</div>
+                    <div id="view_status_page_topsection_time">yesterday</div>
+                </div>
+            </div>
+            <div id="view_status_page_bottomsection">
+                <div class="update_text">hi dahasjbjc lkemdsx;jivjldbfjbvdfjbkjbjbksbjdjdldbjxncm</div>
+            </div>
+            <div id="check_viewed">
+                <img src="icons\arrowback_white.svg" alt="">
+            </div>
+            <div id="view_status_page_viewedBy">
+                <div id="view_status_page_viewedBy_topsection">
+                    <div style="font-size: 19px;">Viewed by 0</div>
+                    <div>
+                        <img src="icons\arrowback_white.svg" alt="">
+                        <img src="icons\arrowback_white.svg" alt="" id="check_viewed_deletebtn">
+                    </div>
+                </div>
+                <div id="view_status_page_viewedBy_text">No views yet</div>
             </div>
         </div>
         <div id="archived_page">
@@ -127,7 +207,7 @@
                     <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="archived_page_arrowback_icon">
                     <div>Archived</div>
                 </div>
-                <img src="icons\ellipses_grey.svg" alt="" class="ellipses" id="archived_page_ellipses">
+                <img src="icons\ellipsis_white.svg" alt="" class="ellipses" id="archived_page_ellipses">
             </div>
             <div id="archived_page_bottomsection">
 
@@ -143,78 +223,172 @@
                     </div>
                 </div>
                 <div id="selectcontact_page_topsection_p2">
-                    <img src="icons\search_grey.svg" alt="" class="search_icon" id="selectcontact_page_search_icon">
-                    <img src="icons\ellipses_grey.svg" alt="" class="ellipses">
+                    <img src="icons\search_white.svg" alt="" class="search_icon" id="selectcontact_page_search_icon">
+                    <img src="icons\ellipsis_white.svg" alt="" style="margin: 0 10px;">
                 </div>
             </div>
             <div id="selectcontact_page_bottomsection">
                 <div id="select_contact_newGroup">
                     <div id="newgroup_icon_div">
-                        <img src="icons\search_grey.svg" alt="" id="newgroup_icon">
+                        <img src="icons\users_half_white.svg" alt="" id="newgroup_icon">
                     </div>
                     <div id="newGroup_text">New Group</div>
                 </div>
                 <div id="select_contact_newContact">
                     <div id="newcontact_icon_div">
-                        <img src="icons\search_grey.svg" alt="" id="newcontact_icon">
+                        <img src="icons\user_whitish.svg" alt="" id="newcontact_icon">
                     </div>                    
                     <div id="newcontact_text">New Contact</div>
                 </div>
+                <div id="select_contact_AllContacts"></div>
+            </div>
+        </div>
+        <div id="new_group_page">
+            <div id="new_group_page_topsection" class="topsections">
+                <div id="new_group_page_topsection_p1">
+                    <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="new_group_page_arrowback_icon">
+                    <div id="new_group_page_topsection_p1_2">
+                        <div id="new_group_text">New Group</div>
+                        <div id="no_of_selected_contacts_section">Add participants</div>
+                    </div>
+                </div>
+                <div id="new_group_page_topsection_p2">
+                    <img src="icons\search_white.svg" alt="" class="search_icon" id="new_group_page_search_icon">
+                </div>
+            </div>      
+            <div id="new_group_selected_participants"></div> 
+            <div id="new_group_page_bottomsection"></div>
+
+            <div id="new_group_page_groupInfoSection" style="display: none;">
+               <div id="new_group_page_groupInfoSection_fl">
+                   <div id="groupInfoSection_fl_fl">
+                       <div id="groupInfoSection_fl_img">
+                            <img src="icons\camera_white.svg" alt="" style="width: 20px;">
+                       </div>
+                       <div id="groupInfoSection_fl_text">
+                           <input type="text" id="groupInfoSection_fl_input" placeholder="Type group subject here..."">
+                       </div>
+                       <img src="icons\emoji.svg" alt="" style="margin: 0 15px;">
+                   </div>
+                   <div class="minitext" style="margin-top: 8px;margin-left: 15px;" >Provide a group subject and optional group icon</div>
+               </div>
+               <div id="new_group_page_groupInfoSection_sl">
+                    <div id="groupInfoSection_sl_fl">
+                        <div>Dissapearing messages</div>
+                        <div class="minitext">Off</div>
+                    </div>
+                    <img src="icons\newtork_usage.svg" alt="" style="width: 25px;">
+               </div>
+               <div id="new_group_page_groupInfoSection_tl">
+                    <div id="participantsNo" class="minitext">participants: 3</div>
+                    <div id="showParticipants"></div>
+               </div>
+            </div>
+
+
+
+            <div id="new_group_nextbtn_div">
+                    <img src="icons\forwardArrow_white.svg" alt="">
+            </div>    
+        </div>
+        <div id="new_contact_page">
+            <img src="icons\arrowback_white.svg" alt="" id="new_contact_page_arrowback_icon">
+            <div class="new_contact_page_sections">
+                <div class="new_contact_page_namesection">Name</div>
+                <div class="new_contact_page_resultsection">
+                    <input type="text" id="new_contact_name" maxlength="20" placeholder="Max 20 Characters" required>
+                </div>
+            </div>
+            <div class="new_contact_page_sections">
+                <div class="new_contact_page_namesection"> Phone no</div>
+                <div class="new_contact_page_resultsection">
+                    <input type="tel" id="new_contact_number" maxlength="30" placeholder="Mobile Number" required>
+                </div>
+            </div>
+            <div class="new_contact_page_sections">
+                <div class="new_contact_page_namesection"> About</div>
+                <div class="new_contact_page_resultsection">
+                    <input type="text" id="new_contact_tagline" maxlength="30" placeholder="Max 30 Characters" required>
+                </div>
+            </div>
+            <button id="new_contact_btn">ADD</button>
+        </div>
+        <div id="linked_devices_page">
+            <div id="linked_devices_topsection" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="linked_devices_page_arrowback_icon">
+                <div id="linked_devices_topsection_text">Linked Devices</div>
+            </div>
+            <div id="linked_devices_bottomsection" class="bottomsections">
+                <div id="linked_devices_bottomsection_one">
+                    <div id="linked_devices_bottomsection_one_image_div">
+                        <img src="" alt="" id="linked_devices_bottomsection_one_image">
+                    </div>
+                    <div style="text-align: center;">Use WhatsApp on other devices</div>
+                    <button id="linked_devices_page_btn">LINK A DEVICE</button>    
+                </div>
+            </div>
+        </div>
+        <div id="starredMessages_page">
+            <div id="starredMessages_topsection" class="topsections">
+                <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="starredMessages_page_arrowback_icon">
+                <div id="starredMessages_topsection_text">Starred messages</div>
+            </div>
+            <div id="starredMessages_bottomsection" class="bottomsections">
+                
             </div>
         </div>
         <div id="settings_page">
             <div id="settings_page_firstline" class="topsections" >
                 <img src="icons\arrowback_white.svg" alt="" id="settings_page_arrowback_icon" class="topsections_icon"> 
-                <div id="settings_page_firstline_text">settings</div>
+                <div id="settings_page_firstline_text">Settings</div>
              </div>
              <div id="settings_main_section">
                  <div id="settings_mainsection_top">
-                     <div id="settings_profile_thumbnail_div">
-                        <img src="icons\user_regular.png" alt="" id="settings_profile_thumbnail">
-                     </div>
+                     <div id="settings_profile_thumbnail_div"></div>
                      <div id="settings_profile_textdiv">
-                         sammy
+                         Sammy
                          <div class="minitext">Hey there i am using whatsApp</div>
                      </div>
                  </div>
+                 <hr class="hr2">
                  <div id="settings_mainsection_bottom">
                     <div id="settings_account_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_account_selector_img">
+                        <img src="icons\key.svg" alt="" id="settings_account_selector_img" class="icons">
                         <div class="setting_selector_inner">
                             Account
                             <div class="minitext">Privacy, security, change number</div>    
                         </div>
                     </div>
                     <div id="settings_chats_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_chats_selector_img">
+                        <img src="icons\chat_milk.svg" alt="" id="settings_chats_selector_img" >
                         <div class="setting_selector_inner">
                             chats
                             <div class="minitext">Theme, wallpaper, chat history</div>    
                         </div>
                     </div>
                     <div id="settings_notifications_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_notifications_selector_img">
+                        <img src="icons\bell_icon.svg" alt="" id="settings_notifications_selector_img">
                         <div class="setting_selector_inner">
                             Notifications
                             <div class="minitext">Message, group & call tones</div>    
                         </div>
                     </div>
                     <div id="settings_storage_data_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_storage_data_selector_img">
+                        <img src="icons\storage_icon.svg" alt="" id="settings_storage_data_selector_img">
                         <div class="setting_selector_inner">
                             Storage & data
                             <div class="minitext">Network usage, auto-download</div>    
                         </div>
                     </div>
                     <div id="settings_help_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_help_selector_img">
+                        <img src="icons\help.svg" alt="" id="settings_help_selector_img">
                         <div class="setting_selector_inner">
                             Help
                             <div class="minitext">Help center,contact us, privacy policy</div>    
                         </div>
                     </div>
-                    <div id="settings_account_selector" class="setting_selectors">
-                        <img src="icons\arrowback_white.svg" alt="" id="settings_account_selector_img">
+                    <div id="invite_page_selector" class="setting_selectors">
+                        <img src="icons\users_grey.svg" alt="" id="invite_page_selector_img">
                         <div class="setting_selector_inner">
                             Invite a friend
                         </div>
@@ -226,6 +400,104 @@
                  </div>
              </div>
         </div>
+        <div id="profile_page">
+            <div id="profile_page_topsection" class="topsections" >
+                <img src="icons\arrowback_white.svg" alt="" id="profile_page_arrowback_icon" class="topsections_icon"> 
+                <div id="profile_page_firstline_text">Profile</div>
+            </div>
+            <div id="profile_page_bottomsection" class="bottomsections">
+                <div id="profile_page_bottomsection_image_section">
+                    <div id="profile_page_bottomsection_image_div">
+                        <div id="profile_page_bottomsection_image_camera_div">
+                            <img src="icons\camera_white.svg" style="width: 22px;" alt="" id="profile_page_bottomsection_image_camera_icon">
+                        </div>
+                    </div>
+                </div>
+                <div id="profile_page_bottomsection_text_section1" class="profile_page_bottomsection_text_sections">
+                    <div class="profile_page_thumbnail_div">
+                        <img src="icons\user_grey.svg" alt="" class="profile_thumbnails">
+                    </div>
+                    <div class="profile_page_input_div">
+                        <div id="profile_page_input_div_line1">
+                            <div>
+                                <div class="minitext">Name</div>
+                                <div id="profile_display_name">Sammy</div>
+                            </div>
+                            <div id="profile_page_input_div_pencil_div1" class="profile_page_input_div_pencil_divs">
+                                <img src="icons\pencil_green.svg" alt="" id="profile_page_input_div_pencil_icon1">
+                            </div>
+                        </div>
+                        <div class="minitext">This is not your username or pin. This name will be visible 
+                            to your whatsApp contacts
+                        </div>
+                        <hr class="hr1">
+                    </div>
+                </div>
+                <div id="profile_page_bottomsection_text_section2" class="profile_page_bottomsection_text_sections">
+                    <div class="profile_page_thumbnail_div">
+                        <img src="icons\info_icon.svg" alt="" style="width: 25px;">
+                    </div>
+                    <div class="profile_page_input_div profile_page_input_div_section2">
+                        <div>
+                            <div class="minitext">About</div>
+                            <div>hey i am using whatsapp</div>
+                        </div>
+                        <div id="profile_page_input_div_pencil_div2" class="profile_page_input_div_pencil_divs">
+                            <img src="icons\pencil_green.svg" alt="" id="profile_page_input_div_pencil_icon2">
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr1" style="margin-left: 20%; width: 80%;">
+                <div id="profile_page_bottomsection_text_section3" class="profile_page_bottomsection_text_sections">
+                    <div class="profile_page_thumbnail_div">
+                     <img src="icons\call_grey.svg" alt="">
+                    </div>
+                    <div>
+                        <div class="minitext">Phone</div>
+                        <div>+2348080382214</div>
+                    </div>
+                </div>   
+            </div>
+            <div id="change_profilename_div">
+                <div id="change_profilename_div_firstline">
+                    Enter your name
+                </div>
+                <div id="change_profilename_div_secondline">
+                    <div id="change_profilename_div_secondline_inputdiv">
+                        <input type="text" id="change_profilename_div_secondline_input" maxlength="25"><span id="profile_character_counter">25</span>
+                    </div>
+                    <div id="profile_emoji_div">
+                        <img src="icons\emoji.svg" alt="" id="profile_emoji_icon">
+                    </div>
+                </div>
+                <div id="change_profilename_div_lastline">
+                    <div id="profile_cancelbtn">CANCEL</div>
+                    <div id="profile_okbtn">OK</div>
+                </div>
+            </div> 
+            <div id="profile_photo_selection_div">
+                <div id="change_profilename_div_firstline">
+                    Profile photo
+                </div>
+                <div id="selections_div">
+                   <div class="selections_divs">
+                        <div class="selections_divs_secondline_imgDiv">
+                            <img src="icons\camera_green.svg" alt="" class="selections_divs_secondline_img">
+                        </div>
+                        <div>Camera</div>
+                   </div>
+                   <div class="selections_divs">
+                        <div class="selections_divs_secondline_imgDiv">
+                            <img src="icons\gallery_green.svg" alt="" class="selections_divs_secondline_img">
+                        </div>
+                        <div>Gallery</div>
+                   </div>
+                </div>
+            </div> 
+            
+
+            
+        </div>
         <div id="account_page">
             <div id="account_page_firstline" class="topsections" >
                <img src="icons\arrowback_white.svg" alt="" id="account_page_arrowback_icon" class="topsections_icon"> 
@@ -233,27 +505,39 @@
             </div>
             <div id="account_page_mainsection">
                 <div id="privacy_selector" class="account_page_mainsection_items">
-                    <img src="icons\arrowback_white.svg" alt="" id="privacy_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\lock.svg" alt="" id="privacy_selector_icon" >
+                    </div>
                     <div id="privacy_selector_text">Privacy</div>
                 </div>
                 <div id="security_selector" class="account_page_mainsection_items">
-                    <img src="icons\shield_regular_grey.svg" alt="" id="security_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\security_shield.svg" alt="" id="security_selector_icon" >
+                    </div> 
                     <div id="security_selector_text">Security</div>
                 </div>
                 <div id="twostep_verification_selector" class="account_page_mainsection_items">
-                    <img src="icons\arrowback_white.svg" alt="" id="2step_verification_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\arrowback_white.svg" alt="" id="2step_verification_selector_icon" >
+                    </div>
                     <div id="2step_verification_selector_text">Two-step verification</div>
                 </div>
                 <div id="change_number_selector" class="account_page_mainsection_items">
-                    <img src="icons\arrowback_white.svg" alt="" id="change_number_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\phone.svg" alt="" id="change_number_selector_icon" >
+                    </div>
                     <div id="change_number_selector_text">Change number</div>
                 </div>
                 <div id="request_account_info_selector" class="account_page_mainsection_items">
-                    <img src="icons\arrowback_white.svg" alt="" id="request_account_info_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\text_icon.svg" alt="" id="request_account_info_selector_icon" >
+                    </div>
                     <div id="request_account_info_selector_text">Request account info</div>
                 </div>
                 <div id="delete_my_account_selector" class="account_page_mainsection_items">
-                    <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_selector_icon" class="account_page_mainsection_icons">
+                    <div class="account_page_mainsection_icons">
+                        <img src="icons\trash.svg" alt="" id="delete_my_account_selector_icon" >
+                    </div>
                     <div id="delete_my_account_selector_text">Delete my account</div>
                 </div>
             </div>
@@ -296,7 +580,7 @@
                         <div  id="read_receipt_icon_2"></div>
                     </div>
                 </div>
-                <hr>
+                <hr class="hr1">
                 <div class="privacy_minitext">Disapperaring messages</div>
                 <div id="disappearing_messages_section">
                     <div id="disappearing_messages_text">
@@ -307,7 +591,7 @@
                     </div>
                     <div id="disappearing_messages_icon">Off</div>
                 </div>
-                <hr>
+                <hr class="hr1">
                 <div id="privacy_groups_Selector" class="privacy_page_items">
                     Groups <div class="privacy_minitext" id="groups_result">Everyone</div>
                 </div>
@@ -572,17 +856,17 @@
             <div id="security_page_mainsection">
                 <div id="security_image_div">
                     <div id="security_image_div_inner">
-                        <img src="icons\shield_lock_black.svg" alt="" id="security_image">
+                        <img src="icons\security_shield.svg" alt="" id="security_image">
                     </div>
                 </div>
-                <div>
+                <div style="font-size: 0.9em;">
                     Messages and calls in end-to-end encrypted chats stay between you and the people 
                     you choose. Not even whatsApp can read or listen to them. <span style="color: #64c4e4;">Learn more</span>
                 </div>
-                <hr>
+                <hr class="hr1">
                 <div id="security_lowersection" >
                     <div id="security_text_2txt">
-                        <div id="security_text_2txt_heading">
+                        <div id="security_text_2txt_heading" style="font-size: 0.9em;">
                             Show security notifications on this phone
                         </div>
                         <div id="security_text_2txt_body">
@@ -665,7 +949,7 @@
             <div id="request_account_info_mainsection" class="bottomsections">
                 <div id="request_account_info_image_div">
                     <div id="request_account_info_image_div_inner">
-                        <img src="icons\shield_lock_black.svg" alt="" id="request_account_info_image">
+                        <img src="icons\document2_white.svg" alt="" id="request_account_info_image">
                     </div>
                 </div>
                 <div id="request_account_info_text">
@@ -674,7 +958,7 @@
                     This report does not include your message. <span style="color: #64c4e4;">Learn more</span>
                 </div>
                 <div id="request_account_info_request_report" >
-                    <img src="icons\arrowback_white.svg" style="margin-right: 25px;" alt="">
+                    <img src="icons\clock_greyish.svg" style="margin-right: 25px; width: 24px;" alt="">
                     Request report
                 </div>
             </div>
@@ -686,7 +970,7 @@
             </div>
             <div id="delete_my_account_mainsection" class="bottomsections">
                 <div id="delete_my_account_lineone" style="color: #c76161;">
-                    <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_iconOne">
+                    <img src="icons\warning_redish.svg" alt="" id="delete_my_account_iconOne">
                     <div >
                         Deleting your account will:
                     </div>
@@ -700,7 +984,7 @@
                 </div>    
                 <div id="delete_my_account_linethree">
                     <div style="display: flex; padding-top: 15px;">
-                        <img src="icons\arrowback_white.svg" alt="" id="delete_my_account_iconTwo">
+                        <img src="icons\phone.svg" alt="" id="delete_my_account_iconTwo">
                         <div >Change number instead?</div>
                     </div>
                     
@@ -771,11 +1055,284 @@
                 </div>    
             </div>
         </div>
+
+
+        <div id="chat_page">
+            <div id="chat_page_topsection">
+                <div id="name_backarrow_group">
+                    <div id="arrowandimg_div">
+                        <img src="icons\arrowback_white.svg" alt="" id="chat_page_backarrow_icon">
+                        <div id="chat_page_profile_thumbnail_div">
+                            <img src="icons\user_grey.svg" alt="" id="chat_page_img">
+                        </div>
+                    </div>
+                    <div id="chat_page_name">Amanda</div>
+                </div>
+                <div id="chat_page_icons">
+                    <img src="icons\video_white.svg" alt="" id="chat_page_video_icon" class="chat_page_topsection_icons">
+                    <img src="icons\call_white.svg" alt="" id="chat_page_call_icon" class="chat_page_topsection_icons">
+                    <img src="icons\ellipsis_white.svg" alt="" id="chat_page_ellipses_icon" class="chat_page_topsection_icons ellipses">
+                </div>
+            </div>
+            <!-- for when you long hold messages in specific chat -->
+            <div id="messageHoldOption">
+                <div id="messageHoldOption_first">
+                    <img src="icons\arrowback_white.svg" alt="" id="messageHoldOption_backarrow_icon" class="messageHoldOption_items">
+                    <div id="noOfSelectedChatMessages" class="messageHoldOption_items">1</div>
+                </div>
+                <div id="messageHoldOption_second">
+                    <img src="icons\reply_white.svg" alt="" id="messageHoldOption_replyIcon" class="messageHoldOption_items">
+                    <img src="icons\star_white.svg" alt="" id="messageHoldOption_starredIcon" class="messageHoldOption_items">
+                    <img src="icons\trash_white.svg" alt="" id="messageHoldOption_trashIcon" class="messageHoldOption_items">
+                    <img src="icons\reply_white.svg" alt="" id="messageHoldOption_forwardIcon" class="messageHoldOption_items" style="transform: scaleX(-1);">
+                    <img src="icons\ellipsis_white.svg" alt="" id="messageHoldOption_ellipsesIcon" class="messageHoldOption_items" style="width: 20px; height: 20px;">
+                </div>
+            </div>
+            <div id="chat_page_search_section" style="display: none;">
+                <div id="chat_page_search_div">
+                    <img src="icons\arrowback_white.svg" alt="" id="chat_page_search_icon">
+                    <input type="text" id="chat_page_search_input" placeholder="Search...">
+                </div>
+                <div id="chat_page_search_up_down">
+                    <img src="icons\arrowback_white.svg" alt="" id="chat_page_search_up_icon">
+                    <img src="icons\arrowback_white.svg" alt="" id="chat_page_search_down_icon">
+                </div>
+            </div>
+            <div id="chat_page_bottomsection" style="margin-bottom: 70px;">
+
+            </div>
+            <div id="chat_page_input_section">
+                <div id="chat_page_input_div">
+                    <div class="chat_page_emoji_icon_div">
+                        <img src="icons\emoji.svg" alt="" id="chat_page_emoji_icon">
+                    </div>
+                    <textarea type="text" id="chat_page_input" placeholder="Message" style="margin: auto;"></textarea>
+                    <div id="chat_page_input_section_icons_div">
+                        <img src="icons\paperclip.svg" alt="" id="chat_page_more_items_icon">
+                        <img src="icons\camera_milk.svg" alt="" id="chat_page_camera_icon">
+                    </div>
+                </div>
+                <div id="chat_page_input_div2">
+                    <div id="chat_page_icon_num_div">
+                        <img src="icons\arrowback_black.svg" alt="">
+                        <div id="audio_recording_timer">0:00</div>
+                    </div>
+                    <div> <img src="" alt=""> slide to cancel</div>
+                </div>
+                <div id="lock_audio_div">
+                    <img src="icons\lock_white.svg" alt="" style="width: 25px; padding-bottom: 10px;">
+                    <img src="icons\arrowback_black.svg" alt="">
+                </div>
+                <div class="audio_send_icon_div">
+                    
+                </div>
+            </div>
+            <div id="audio_input_section">
+                <div id="audio_input_section_firstline">
+                    <div id="show_timer">0.03</div>
+                    <div><img src="" alt=""> Recording.............</div>
+                </div>
+                <div id="audio_input_section_secondline">
+                    <img src="icons\trash.svg" alt="" style="width: 35px;" id="delete_recorded_audio">
+                    <div id="pause_and_play_main_div">
+                        <img src="icons\play_red.svg" alt="" class="pause_and_play_main_divs" id="main_playicon">
+                        <img src="icons\pause_red.svg" alt="" class="pause_and_play_main_divs" id="main_pauseicon" style="display: block;">
+                    </div>
+                    <div id="audio_send_div">
+                        <img src="icons\send_white.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="audio_send_icon_div" id="audio_send_icon_div_main">
+                <div id="audio_icon_div" class="audio_send_icon_divs">
+                    <img src="icons\microphone_white.svg" alt="">
+                </div>
+                <div id="send_icon_div" class="audio_send_icon_divs">
+                    <img src="icons\send_white.svg" alt="">
+                </div>
+            </div>
+            
+            <div id="chat_page_media_links_docs_page">
+                <div id="chat_page_media_links_docs_page_topsection">
+                    <div id="media_links_docs_page_mediasection" class="mld_items media_links_docs_active">MEDIA</div>
+                    <div id="media_links_docs_page_linkssection" class="mld_items">LINKS</div>
+                    <div id="media_links_docs_page_docssection" class="mld_items">DOCS</div>
+                </div>
+                <div id="chat_page_media_links_docs_page_media_section">
+                    <div class="chat_page_media_links_docs_items">No media</div>
+                </div>
+                <div id="chat_page_media_links_docs_page_links_section">
+                    <div class="chat_page_media_links_docs_items">No links</div>
+                </div>
+                <div id="chat_page_media_links_docs_page_docs_section">
+                    <div class="chat_page_media_links_docs_items">No docs</div>
+                </div>
+            </div>
+           
+            
+            <div id="block_popup" class="chat_page_popups">
+                <div id="block_popup_firstline">
+                    Block Manny?
+                </div>
+                <div id="block_popup_secondline" class="popup_minitext">
+                    Blocked contacts cannot call or send you message. This contact will not be notified.
+                </div>
+                <div id="block_popup_thirdline" >
+                    <div class="popup_minitext">
+                        <div style="display: flex;">
+                            <div class="checkbox_div" id="block_checkbox">
+                                <img src="icons\checkmark_black.svg" alt="" id="block_checkmark">
+                            </div>
+                            Report contact
+                        </div>
+                        <div style="padding-left: 40px;">The last 5 messages will be forwarded to WhatsApp</div>
+                    </div>
+                </div>
+                <div id="block_popup_fourthline">
+                    <div class="block_popup_buttons" id="block_popup_cancel_btn">
+                        CANCEL
+                    </div>
+                    <div class="block_popup_buttons" id="block_popup_block_btn">
+                        BLOCK
+                    </div>        
+                </div>    
+            </div>
+            <div id="clear_chat_popup" class="chat_page_popups">
+                <div id="clear_chat_popup_firstline">
+                    Changes to clearing or deleting a chat
+                </div>
+                <div id="clear_chat_popup_secondline" class="popup_minitext">
+                    Clearing or deleting entire chats will only remove messages
+                    from this device and your devices on the newer versions of WhatsApp.
+                </div>
+                <div id="clear_chat_popup_thirdline" class="block_popup_buttons">
+                    <div id="clear_chat_popup_btn">CONTINUE</div>
+                </div>     
+            </div>
+            <div id="more_items_popup">
+                <div class="more_items_items_div">
+                    <div class="more_items_items_div_inner" id="document_selector_inner">
+                        <img src="icons\document2_white.svg" alt="" class="more_items_icon" style="width: 30px;">
+                        <input type="file" style="opacity: 0;" accept="image/*" capture="camera">
+                    </div>
+                    <div class="more_items_items_div_text">Document</div>
+                </div>
+                <div class="more_items_items_div">
+                    <div class="more_items_items_div_inner" id="camera_selector_inner">
+                        <img src="icons\camera_white.svg" alt="" class="more_items_icon" style="width: 20px;">
+                    </div>
+                    <div class="more_items_items_div_text">Camera</div>
+                </div>
+                <div class="more_items_items_div" id="gallery_selector">
+                    <div class="more_items_items_div_inner" id="gallery_selector_inner">
+                        <img src="icons\gallery_white.svg" alt="" class="more_items_icon">
+                        <input type="file" style="opacity: 0;" >
+                    </div>
+                    <div class="more_items_items_div_text">Gallery</div>
+                </div>
+                <div class="more_items_items_div">
+                    <div class="more_items_items_div_inner" id="audio_selector_inner">
+                        <img src="icons\headphones_white.svg" alt="" class="more_items_icon">
+                    </div>
+                    <div class="more_items_items_div_text">Audio</div>
+                </div>
+                <div class="more_items_items_div">
+                    <div class="more_items_items_div_inner" id="location_selector_inner">
+                        <img src="icons\location_white.svg" alt="" class="more_items_icon">
+                    </div>
+                    <div class="more_items_items_div_text">Location</div>
+                </div>
+                <div class="more_items_items_div">
+                    <div class="more_items_items_div_inner" id="contacts_selector_inner">
+                        <img src="icons\user_whitish.svg" alt="" class="more_items_icon">
+                    </div>
+                    <div class="more_items_items_div_text">Contact</div>
+                </div>
+            </div>
+        </div>
+        <div id="report_popup" class="chat_page_popups">
+            <div id="report_popup_firstline">
+                Report Manny?
+            </div>
+            <div id="report_popup_secondline" class="popup_minitext">
+                The last 5 messages will be forwarded to WhatsApp.
+                If you report this contact and delete this chat, messages 
+                will omly be removed from this device and your devices 
+                on the newer versions of WhatsApp.
+            </div>
+            <div id="report_popup_thirdline" class="popup_minitext">
+                This contact will not be notified.
+            </div>
+            <div id="report_popup_fourtline">
+                <div class="checkbox_div" id="report_checkbox">
+                    <img src="icons\checkmark_black.svg" alt="" id="report_checkmark">
+                </div>
+                <div class="popup_minitext">report contacts and delete chat</div>
+            </div>
+            <div id="report_popup_fifthline">
+                <div class="report_popup_buttons" id="report_popup_cancel_btn">
+                    CANCEL
+                </div>
+                <div class="report_popup_buttons" id="report_popup_report_btn">
+                    REPORT
+                </div>  
+            </div>      
+        </div>
+        <div class="chat_page_popups" id="mute_notification_popup">
+            <div id="mute_notification_popup_firstline">
+                Mute notifications for...
+            </div>
+            <div id="mute_notification_popup_secondline">
+                <div id="mute_notification_radiosection">
+                    <div class="radio_div" id="mute_notification_eight_hrs">
+                        <div class="radiobtn_outer_popups" id="mute_notification_eight_hrs_outer">
+                            <div class="radiobtn_inner " style="display: none;" id="mute_notification_eight_hrs_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">8 hours</div>
+                    </div>
+                    <div class="radio_div" id="mute_notification_one_week">
+                        <div class="radiobtn_outer_popups" id="mute_notification_one_week_outer">
+                            <div class="radiobtn_inner" style="display: none;" id="mute_notification_one_week_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">1 week</div>
+                    </div>
+                    <div class="radio_div" id="mute_notification_always">
+                        <div class="radiobtn_outer_popups" id="mute_notification_always_outer" style="border: 2px solid #1EBEA5;"> 
+                            <div class="radiobtn_inner"  id="mute_notification_always_inner"></div>
+                        </div>
+                        <div class="radiobtn_text">Always</div>
+                    </div>
+                </div>
+                <hr class="hr1">
+                <div id="mute_notification_popup_thirdline">
+                    <div style="display: flex; font-size: 16px;">
+                        <div class="checkbox_div" id="mute_notification_popup_checkbox"> 
+                            <img src="icons\checkmark_black.svg" alt="" id="mute_notification_popup_checkmark">
+                        </div>
+                        Show notifications
+                    </div>
+                </div>
+                <div id="mute_notification_popup_fourthline">
+                    <div class="mute_notification_popup_buttons" id="mute_notification_cancel_btn">
+                        CANCEL
+                    </div>
+                    <div class="mute_notification_popup_buttons" id="mute_notification_ok_btn">
+                        OK
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+
         <div id="contact_info_page">
             <div id="contact_info_topsection" class="topsections">
-                <img src="icons\arrowback_white.svg" alt="" id="contact_info_page_arrowback_icon" class="topsections_icon">
-                <img src="" alt="" id="contact_profile_picture_thumbnail">
-                <img src="" alt="" id="contact_info_page_ellipses">
+                <div id="contact_info_topsection_icons">
+                    <img src="icons\arrowback_white.svg" alt="" id="contact_info_page_arrowback_icon" >
+                    <div id="contact_info_topsection_img"></div>
+                    <div id="contact_info_topsection_name">Amanda</div>
+                </div>
+                <img src="icons\ellipsis_vertical_icon (1).svg" alt="" id="contact_info_page_ellipses" class="icons">
             </div>    
             <div id="contact_info_mainsection" class="bottomsections">
                 <div id="contact_info_profile_div">
@@ -788,15 +1345,15 @@
                     <div id="contact_info_number">q564532413546</div>
                     <div id="contact_info_icons_div">
                         <div id="contact_info_audio_icon_div">
-                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_audio_icon">
+                            <img src="icons\call_green.svg" alt="" id="contact_info_audio_icon" class="icons">
                             <div class="contact_info_icons_text">Audio</div>
                         </div>
                         <div id="contact_info_video_icon_div">
-                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_video_icon">
+                            <img src="icons\video_green.svg" alt="" id="contact_info_video_icon" class="icons">
                             <div class="contact_info_icons_text">Video</div>
                         </div>
                         <div id="contact_info_search_icon_div">
-                            <img src="icons\ellipses_grey.svg" alt="" id="contact_info_search_icon">
+                            <img src="icons\search_green.svg" alt="" id="contact_info_search_icon" class="icons">
                             <div class="contact_info_icons_text">Search</div>  
                         </div >      
                     </div>
@@ -811,7 +1368,7 @@
                 <div id="contact_info_notification_section">
                     <div id="contact_info_mute_notification_div" class="contact_info_notification_items">
                         <div id="contact_info_mute_notification_icon_div" class="contact_info_media_visibility_icons">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\bell_icon.svg" alt="" >
                         </div>
                         <div id="contact_info_mute_notification_text">
                             Mute notifications
@@ -823,13 +1380,13 @@
                     </div>
                     <div id="contact_info_custom_notification_div" class="contact_info_notification_items">
                         <div id="contact_info_custom_notification_icon_div" class="contact_info_media_visibility_icons">
-                            <img src="icons\ellipses_grey.svg" alt="">
+                            <img src="icons\music_note.svg" alt="">
                         </div>
                         <div>Custom notification</div>
                     </div>
                     <div id="contact_info_media_visibility" class="contact_info_notification_items">
                         <div id="contact_info_media_visibility_icon_div" class="contact_info_media_visibility_icons">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\gallery_grey.svg" alt="" >
                         </div>
                         <div>Media visibility</div>
                     </div>
@@ -837,16 +1394,16 @@
                 <div id="contact_info_encryption_section">
                     <div id="contact_info_encryption_div">
                         <div class="contact_info_encryption_icons">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\lock.svg" alt="" >
                         </div>
                         <div class="contact_info_encryption_text">
                             <div style="margin-bottom: 5px; ">Encryption</div>
-                            <div style="color: grey;">Messages and calls are end-to-end encrypted. Tap to verify.</div>
+                            <div style="color: #929ea1; font-size: 16px;">Messages and calls are end-to-end encrypted. Tap to verify.</div>
                         </div>
                     </div>
                     <div id="contact_info_disappearing_messages_div">
                         <div class="contact_info_encryption_icons">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\newtork_usage.svg" alt="" style="width: 22px;">
                         </div>
                         <div class="contact_info_encryption_text">
                             <div style="margin-bottom: 5px;">Disappearing messages</div>
@@ -855,11 +1412,11 @@
                     </div>
                 </div>
                 <div id="contact_info_groups_section">
-                    <div style="margin-bottom: 20px;">1 group in common</div>
+                    <div style="margin-bottom: 20px;">0 groups in common</div>
                     <div id="contact_info_create_group_div">
                         <div id="contact_info_create_group_icon_div">
                             <div id="contact_info_create_group_icon_div_inner">
-                                <img src="icons\ellipses_grey.svg" alt="" >
+                                <img src="icons\users_half_white.svg" alt="" >
                             </div>
                         </div>
                         <div id="contact_info_create_group_text">
@@ -870,20 +1427,402 @@
                 <div id="contact_info_block_and_report_section">
                     <div id="contact_info_block_div">
                         <div class="contact_info_block_icon_div">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\block_red.svg" alt="" >
                         </div>   
-                        <div>Block Amanda</div>
+                        <div style="color: #C76161;" id="blockContactText">Block Amanda</div>
                     </div>     
                     <div id="contact_info_report_div">
                         <div class="contact_info_block_icon_div">
-                            <img src="icons\ellipses_grey.svg" alt="" >
+                            <img src="icons\thumbsDown_red.svg" alt="" style="position: relative; top:7px;">
                         </div>   
-                        <div>Report Amanda</div>
+                        <div style="color: #C76161;" id="reportContactText">Report Amanda</div>
                     </div>     
+                </div>
+                <div id="media_visibility_popup" class="chat_page_popups">
+                    <div id="media_visibility_popup_firstline">
+                        Show newly downloaded media from this chat in your phones's gallery?
+                    </div>
+                    <div id="media_visibility_popup_radiosection">
+                        <div class="radio_div" id="media_visibility_popup_default">
+                            <div class="radiobtn_outer_popups" id="media_visibility_popup_default_outer" style="border: 2px solid #1EBEA5;">
+                                <div class="radiobtn_inner "  id="media_visibility_popup_default_inner"></div>
+                            </div>
+                            <div class="radiobtn_text">Default (Yes)</div>
+                        </div>
+                        <div class="radio_div" id="media_visibility_popup_yes">
+                            <div class="radiobtn_outer_popups" id="media_visibility_popup_yes_outer">
+                                <div class="radiobtn_inner" style="display: none;" id="media_visibility_popup_yes_inner"></div>
+                            </div>
+                            <div class="radiobtn_text">Yes</div>
+                        </div>
+                        <div class="radio_div" id="media_visibility_popup_no">
+                            <div class="radiobtn_outer_popups" id="media_visibility_popup_no_outer"> 
+                                <div class="radiobtn_inner" style="display: none;" id="media_visibility_popup_no_inner"></div>
+                            </div>
+                            <div class="radiobtn_text">No</div>
+                        </div>
+                    </div>
+                    <div id="media_visibility_popup_lastline">
+                        <div class="media_visibility_popup_buttons" id="media_visibility_popup_cancel_btn">
+                            CANCEL
+                        </div>
+                        <div class="media_visibility_popup_buttons" id="media_visibility_popup_ok_btn">
+                            OK
+                        </div>
+                    </div>
+                </div>
+                <div id="contact_page_block_popup" class="chat_page_popups">
+                    <div id="contact_page_block_popup_firstline">
+                        Block Amanda?
+                    </div>
+                    <div id="contact_page_block_popup_lastline">
+                        <div class="contact_page_block_popup_buttons" id="contact_page_block_popup_cancel_btn">
+                            CANCEL
+                        </div>
+                        <div class="contact_page_block_popup_buttons" id="contact_page_block_popup_block_btn">
+                            BLOCK
+                        </div>  
+                    </div>      
                 </div>
             </div>    
         </div>
-        
+        <div id="custom_notification_page">
+            <div id="custom_notification_page_topsection" class="topsections">
+                <div style="display: flex;">
+                    <img src="icons\arrowback_white.svg" alt="" id="custom_notification_page_arrowback_icon">
+                    <div style="margin-left: 20px;">Notifications</div>
+                </div>
+                <img src="icons\arrowback_white.svg" alt="" id="custom_notification_page_ellipses_icon">
+            </div>
+            <div id="custom_notification_page_bottomsection">
+                <div id="custom_notification_bottomsection_main">
+                    <div>Use custom notifications</div>
+                    <div class="custom_notification_page_checkbox" id="custom_notification_bottomsection_main_checkbox"></div>
+                </div>
+                    
+                <div id="custom_notification_bottomsection_sub">
+                    <div id="custom_notification_firstline" class="minitext">
+                        Message notification
+                    </div>
+                    <div id="custom_notification_secondline" >
+                        <div class="custom_notification_sections" id="custom_notification_notification_tone">
+                            <div>Notification tone</div>
+                            <div class="custom_notification_minitexts">Default (Future)</div>
+                        </div>
+                        <div class="custom_notification_sections" id="custom_notification_vibrate">
+                            <div>Vibrate</div>
+                            <div class="custom_notification_minitexts">Default</div>
+                        </div>
+                        <div class="custom_notification_sections" id="custom_notification_popup_notification">
+                            <div>Popup notification</div>
+                            <div class="custom_notification_minitexts">No popup</div>
+                        </div>
+                        <div class="custom_notification_sections" id="custom_notification_light">
+                            <div>Light</div>
+                            <div class="custom_notification_minitexts">White</div>
+                        </div>
+                        <div class="custom_notification_sections" id="custom_notification_hpn">
+                            <div id="hpn_div">
+                                <div id="hpn_text_section">
+                                    <div id="hpn_text_header">
+                                        Use high priority notifications
+                                    </div>
+                                    <div class="custom_notification_minitexts">
+                                        Show previews of notifications at the top of the screen
+                                    </div>
+                                </div>
+                                <div id="hpn_checkbox" class="custom_notification_page_checkbox">
+
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="custom_notification_minitexts">
+                                Call notifications
+                            </div>
+                            <br>
+                            <div id="custom_notification_ringtone_div">
+                                <div>Ringtone</div>
+                                <div class="custom_notification_minitexts">Default (life aint fair)</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="custom_notification_sections" id="custom_notification_vibrate">
+                            <div>Vibrate</div>
+                            <div class="custom_notification_minitexts">Default</div>
+                        </div>
+                    </div>    
+                </div>
+        </div>
+        <div id="storage_and_data_page">
+            <div id="storage_and_data_page_topsection" class="topsections">
+                <div style="display: flex;">
+                    <img src="icons\arrowback_white.svg" alt="" id="storage_and_data_page_arrowback_icon">
+                    <div style="margin-left: 20px;">Storage and data</div>
+                </div>
+            </div>
+            <div id="storage_and_data_bottomsection" class="bottomsections">
+                <div id="storage_and_data_bottomsection_firstline">
+                    <div id="storage_and_data_firstline_imgDiv">
+                        <img src="icons\folder_grey.svg" alt="" id="storage_and_data_firstline_img">
+                    </div>
+                    <div id="storage_and_data_firstline_textDiv">
+                        <div>Manage storage</div>
+                        <div class="minitext">1.1 GB</div>
+                    </div>
+                </div>
+                <hr class="hr1">
+                <div id="storage_and_data_secondline">
+                <div id="storage_and_data_secondline_imgDiv">
+                    <img src="icons\newtork_usage.svg" alt="" id="storage_and_data_secondline_img">
+                </div>
+                <div id="storage_and_data_secondline_textDiv">
+                    <div id="storage_and_data_secondline_textDiv1">
+                        <div>Network usage</div>
+                        <div class="minitext">543kb sent 48.9MB received</div>
+                    </div>
+                    <div id="storage_and_data_secondline_textDiv2">
+                        <div id="storage_and_data_secondline_textDiv2_text">
+                            Use less data for calls
+                        </div>
+                        <div id="storage_and_data_secondline_textDiv2_switch">
+                            <div id="storage_and_data_switch_div1"></div>
+                            <div id="storage_and_data_switch_div2"></div>
+                        </div>
+                    </div>
+                </div>    
+                </div>
+                <hr class="hr1">
+                <div id="storage_and_data_thirdline" class="minitext">
+                    <div style="margin-bottom: 10px;">Media auto-download</div>
+                    <div style="font-size: 14px;">voice message are always automatically downloaded</div>
+                </div>
+                <div id="storage_and_data_fourthline" style="margin-top: 20px;">
+                    <div id="storage_and_data_fourthline1" class="storage_and_data_fourthlines">
+                        <div>When using mobile data</div>
+                        <div class="minitext" id="using_mb_display">No media</div>
+                    </div>
+                    <div id="storage_and_data_fourthline2" class="storage_and_data_fourthlines">
+                        <div>When connected on wifi</div>
+                        <div class="minitext" id="using_wifi_display">No media</div>
+                    </div>
+                    <div id="storage_and_data_fourthline3" class="storage_and_data_fourthlines">
+                        <div>When roaming</div>
+                        <div class="minitext" id="using_roaming_display">No media</div>
+                    </div>
+                </div>
+                <hr class="hr1">
+                <div id="storage_and_data_fifthline" class="minitext">
+                    <div style="margin-bottom: 10px;">Media upload quality</div>
+                    <div style="font-size: 14px;">Choose the quality of the media files to be sent</div>
+                </div>
+                <div id="storage_and_data_sixthline">
+                    <div>Photo upload quality</div>
+                    <div class="minitext">Auto (recommended)</div>
+                </div>
+            </div>        
+        </div>
+        <div id="when_using_mb_popup" class="storage_data_popups">
+            <div class="storage_data_popups_firstline">
+                When using mobile data
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_photos1">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_photos1_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Photos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_audio1">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_audio1_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Audio</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_videos1">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_videos1_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Videos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_documents1">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_documents1_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Documents</div>
+            </div>
+            <div class="storage_data_popups_lastline">
+                <div class="storage_data_popups_btn" id="storage_data_popups_cancelbtn">CANCEL</div>
+                <div class="storage_data_popups_btn" id="storage_data_popups_okbtn">OK</div>
+            </div>   
+        </div>
+        <div id="when_using_wifi_popup" class="storage_data_popups">
+            <div class="storage_data_popups_firstline">
+                When connected on Wi-Fi
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_photos2">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_photos2_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Photos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_audio2">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_audio2_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Audio</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_videos2">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_videos2_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Videos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_documents2">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_documents2_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Documents</div>
+            </div>
+            <div class="storage_data_popups_lastline">
+                <div class="storage_data_popups_btn" id="storage_data_popups_cancelbtn2">CANCEL</div>
+                <div class="storage_data_popups_btn" id="storage_data_popups_okbtn2">OK</div>
+            </div>   
+        </div>
+        <div id="when_roaming_popup" class="storage_data_popups">
+            <div class="storage_data_popups_firstline">
+                When roaming
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_photos3">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_photos3_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Photos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_audio3">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_audio3_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Audio</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_videos3">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_videos3_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Videos</div>
+            </div>
+            <div class="storage_data_popups_otherlines" id="storage_data_popups_documents3">
+                <div class="storage_data_popups_otherlines_checkbox_div">
+                    <div class="storage_data_popups_otherlines_checkbox" id="storage_data_popups_documents3_cb"></div>
+                </div>
+                <div class="storage_data_popups_otherlines_text" >Documents</div>
+            </div>
+            <div class="storage_data_popups_lastline">
+                <div class="storage_data_popups_btn" id="storage_data_popups_cancelbtn3">CANCEL</div>
+                <div class="storage_data_popups_btn" id="storage_data_popups_okbtn3">OK</div>
+            </div>   
+        </div>
+         
+
+
+        <div id="help_page">
+            <div id="help_page_topsection" class="topsections">
+                <div style="display: flex;">
+                    <img src="icons\arrowback_white.svg" alt="" id="help_page_arrowback_icon">
+                    <div style="margin-left: 20px;">Help</div>
+                </div>
+            </div>
+            <div id="help_page_bottomsection" class="bottomsections">
+                <div class="help_page_sections">
+                    <div class="help_page_thumbnail_image">
+                        <img src="icons\circled_questionMark.svg" alt="" style="width: 26px;">
+                    </div>
+                    <div class="help_page_texts" style="position: relative; top: 2px;">
+                        Help center
+                    </div>
+                </div>
+                <div class="help_page_sections">
+                    <div class="help_page_thumbnail_image">
+                        <img src="icons\users_grey.svg" alt="" style="position: relative; top: 10px;">
+                    </div>
+                    <div class="help_page_texts" id="contact_us_selector">
+                       <div>Contact us</div>
+                       <div class="minitext">
+                        Questions? Need help?
+                       </div>
+                    </div>
+                </div>
+                <div class="help_page_sections">
+                    <div class="help_page_thumbnail_image">
+                        <img src="icons\document_grey.svg" alt="">
+                    </div>
+                    <div class="help_page_texts">
+                        Terms and privacy policy
+                    </div>
+                </div>
+                <div class="help_page_sections">
+                    <div class="help_page_thumbnail_image">
+                        <img src="icons\info_icon.svg" alt="" style="width: 25px;">
+                    </div>
+                    <div class="help_page_texts">
+                        App info
+                    </div>
+                </div>
+            </div>        
+        </div>
+            
+
+        <div id="contact_us_page">
+            <div id="contact_us_page_topsection" class="topsections">
+                <div style="display: flex;">
+                    <img src="icons\arrowback_white.svg" alt="" id="contact_us_page_arrowback_icon">
+                    <div style="margin-left: 20px;">Contact us</div>
+                </div>
+            </div> 
+            <div id="contact_us_bottomsection" class="bottomsections">
+                <textarea name="" id="contact_us_page_textarea" placeholder="Tell us how we can help you"></textarea>
+                <div id="contact_us_bottomsection_secondline">
+                    <div id="contact_us_bottomsection_secondline_texts">
+                        Include device Information? (Optional) <br>
+                        Technaical details like your model and setting can help us answer your question.
+                        <span style="color: rgb(74, 193, 233);font-size: 15px;">Learn more</span>
+                    </div>
+                    <div id="contact_us_bottomsection_secondline_checkbox">
+                        <div class="custom_notification_page_checkbox"></div>
+                    </div>
+                </div>
+                <div id="contact_us_bottomsection_lastline">
+                    <div id="contact_us_bottomsection_lastline_texts">
+                       We will respond to you in a WhatsApp chat
+                    </div>
+                    <div id="contact_us_bottomsection_button">NEXT</div>
+                </div>
+            </div>       
+        </div>
+
+        <div id="invite_page">
+            <div id="invite_page_page_topsection" class="topsections">
+                <div id="invite_page_page_topsection_p1">
+                    <img src="icons\arrowback_white.svg" alt="" class="arrowback_icon" id="invite_page_arrowback_icon">
+                    <div id="invite_page_text">Invite a friend</div>
+                </div>
+                <div id="invite_page_page_topsection_p2">
+                    <img src="icons\search_white.svg" alt="" class="search_icon" id="invite_page_page_search_icon">
+                </div>
+            </div>
+            <div id="invite_page_bottom_section" >
+                <div id="share_link_section">
+                    <div id="share_link_image_section">
+                        <div id="share_link_image_div">
+                            <img src="icons\share_white.svg" alt="" style="width: 23px;">
+                        </div>
+                    </div>
+                    <div id="share_link_text_section">
+                        Share link
+                    </div>
+                </div>
+                <div class="minitext" style="padding: 15px;">From Contacts</div>
+            </div>    
+        </div>
     </div>
     
 
