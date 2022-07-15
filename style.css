@@ -14,7 +14,7 @@
 #mainpage{
     width: 100%;
     height: 100%;
-    display: none;
+    /* display: none; */
 }
 .icons{
     width:27px;
@@ -531,12 +531,14 @@
 
 #archived_page_topsection{
     width: 100%;
-    height: 10%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #23333d;
     padding: 15px;
+    position: fixed;
+    top: 0;
 }
 #archivedTextAndIcon{
     display: flex;
@@ -546,8 +548,9 @@
 }
 #archived_page_bottomsection{
     width: 100%;
-    height: 90%;
+    min-height: 100%;
     background-color: #121920;
+    padding-top: 80px;
 }
 #selectcontact_page{
     width: 100%;
@@ -1668,7 +1671,7 @@
     background-color: #182229;
     display: flex;
     flex-direction: column;
-    /* display: none */
+    display: none
 }
 #arrowandimg_div{
     display: flex;
@@ -2790,4 +2793,31 @@
 }
 .search_icon{
     width: 25px;
+}
+#biggerscreens{
+    display: none;
+}
+
+
+@media screen and (min-width: 480px) {
+    #container{
+        display: none;
+    }
+    #biggerscreens{
+        display: block;
+        background-color: #182229;
+        width: 100vw;
+        height: 100vh;
+        padding: 25px;
+    }
+    #biggerscreensText{
+        width: calc(100% - 50px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 4em;
+        color: #929ea1;
+        font-weight: 500;
+    }
 }

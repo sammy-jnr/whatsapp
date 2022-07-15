@@ -270,9 +270,11 @@ show_image_page_arrowback_icon.addEventListener("click", ()=>{
 
 
 // settings page account privacy ish
+let lastPageStatusPrivacy = ""
 let status_privacy_selector = document.getElementById("status_privacy_selector")
 status_privacy_selector.addEventListener("click", ()=>{
     CloseAllPages();
+    lastPageStatusPrivacy = "home"
     status_privacy_page.style.display = "block"
 })
 
@@ -542,6 +544,12 @@ check_status.addEventListener("click", ()=>{
     status_privacy_page.style.display = "block"
 })
 status_privacy_page_arrowback_icon.addEventListener("click", ()=>{
+    if(lastPageStatusPrivacy == "home"){
+        CloseAllPages();
+        lastPageStatusPrivacy = ""
+        mainpage.style.display = "block";
+        return;
+    }
     CloseAllPages()
     privacy_page.style.display = "block"
 })
@@ -885,10 +893,13 @@ select_contact_newGroup.addEventListener("click", ()=>{
 let new_group_selector = document.getElementById("new_group_selector")
 new_group_selector.addEventListener("click", ()=>{
     CloseAllPages()
+    lastPageNewgroup = "home"
     new_group_page.style.display = "block"
 })
 
 // selectcontact page new group
+let lastPageNewgroup = ""
+
 let no_of_selected_contacts_section = document.getElementById("no_of_selected_contacts_section")
 let new_group_page_arrowback_icon = document.getElementById("new_group_page_arrowback_icon")
 new_group_page_arrowback_icon.addEventListener("click", ()=>{
@@ -909,6 +920,12 @@ new_group_page_arrowback_icon.addEventListener("click", ()=>{
     new_group_page_bottomsection.style.paddingTop = "90px"
     newGroupParticipantArray = []
     no_of_selected_contacts_section.innerHTML = "Add participants"
+    if(lastPageNewgroup == "home"){
+        CloseAllPages()
+        lastPageNewgroup = ""
+        mainpage.style.display = "block"
+        return;
+    }
     CloseAllPages()
     selectcontact_page.style.display = "block"
 })
@@ -1210,6 +1227,7 @@ contact_info_media_links_docs_div.addEventListener("click", ()=>{
 //chat page
 
 //chat page bottom section
+let lastPageChatpage = ""
 let chat_page_bottomsection = document.getElementById("chat_page_bottomsection")
 arrowandimg_div.addEventListener("click", ()=>{
     if(chat_page_media_links_docs_page.style.display == "block"){
@@ -1217,6 +1235,30 @@ arrowandimg_div.addEventListener("click", ()=>{
         chat_page_input_section.style.display = "flex"
         chat_page_bottomsection.style.display = "block"
         return
+    }
+    if(lastPageChatpage == "active"){
+        CloseAllPages();
+        lastPageChatpage = "";
+        mainpage.style.display = "block";
+        return;
+    }
+    if(lastPageChatpage == "contact"){
+        CloseAllPages();
+        lastPageChatpage = "";
+        selectcontact_page.style.display = "block";
+        return;
+    }
+    if(lastPageChatpage == "archive"){
+        CloseAllPages();
+        lastPageChatpage = "";
+        archived_page.style.display = "block";
+        return;
+    }
+    if(lastPageChatpage == "newGroup"){
+        CloseAllPages();
+        lastPageChatpage = "";
+        new_group_page.style.display = "block";
+        return;
     }
     CloseAllPages()
     mainpage.style.display = "block"
@@ -1745,6 +1787,7 @@ function showContacts(){
         contact_div_name_section.appendChild(contact_tagline) 
         contact_div.addEventListener("click", ()=>{
             CloseAllPages()
+            lastPageChatpage = "contact"
             chat_page.style.display = "block"
             chat_page_name.innerHTML = contact.name
             contact_info_name.innerHTML = contact.name
@@ -1847,6 +1890,7 @@ function appendToActiveChats(){
                 }
                 CloseAllPages()
                 chat_page.style.display = "block"
+                lastPageChatpage = "active"
                 chat_page_name.innerHTML = activeChatArray[i].name
                 contact_info_name.innerHTML = activeChatArray[i].name
                 contact_info_number.innerHTML = activeChatArray[i].phoneNo
@@ -1981,6 +2025,7 @@ function appendToArchivedChats(){
             contact_div.addEventListener("click", ()=>{
                 CloseAllPages()
                 chat_page.style.display = "block"
+                lastPageChatpage = "archive"
                 chat_page_name.innerHTML = archivedArray[i].name
                 contact_info_name.innerHTML = archivedArray[i].name
                 contact_info_number.innerHTML = archivedArray[i].phoneNo
